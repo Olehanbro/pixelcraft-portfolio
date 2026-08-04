@@ -1,8 +1,8 @@
 {
-  "name": "aurelia",
+  "name": "novera",
   "version": "1.0.0",
   "private": true,
-  "description": "Aurelia luxury boutique storefront.",
+  "description": "Novera AI strategy studio website.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",

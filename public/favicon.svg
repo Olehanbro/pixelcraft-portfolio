@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Aurelia monogram">
-  <rect width="256" height="256" fill="#121212"/>
-  <circle cx="128" cy="128" r="94" fill="none" stroke="#c8a45f" stroke-width="3"/>
-  <path fill="#f9f8f6" d="M129 55h4l59 145h-28l-13-35H95l-13 35H55L115 55h14Zm13 86-19-53-19 53h38Z"/>
-  <path fill="#c8a45f" d="M84 207h88v6H84z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" rx="56" fill="#080b13"/><circle cx="128" cy="128" r="83" fill="#b8f05f"/><path d="M82 174V82h29l38 52V82h25v92h-27l-40-54v54H82Z" fill="#080b13"/><path d="M64 206h128" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".8"/></svg>

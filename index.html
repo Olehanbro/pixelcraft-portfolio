@@ -3,215 +3,246 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aurelia | Quiet Luxury Boutique</title>
-    <meta name="description" content="Aurelia curates refined seasonal pieces for modern wardrobes, crafted with restraint, texture, and lasting elegance." />
+    <title>Novera | AI Strategy Studio</title>
+    <meta name="description" content="Novera helps ambitious teams turn AI into practical systems for strategy, operations, analytics, and growth." />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Aurelia | Quiet Luxury Boutique" />
-    <meta property="og:description" content="Refined seasonal pieces, considered styling, and a quiet luxury boutique experience." />
-    <meta property="og:image" content="https://aurelia-xi-ten.vercel.app/og.png" />
+    <meta property="og:title" content="Novera | AI Strategy Studio" />
+    <meta property="og:description" content="AI strategy, automation, and analytics consulting for teams that need clear execution." />
+    <meta property="og:image" content="https://novera-ai.vercel.app/og.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Aurelia | Quiet Luxury Boutique" />
-    <meta name="twitter:description" content="Refined seasonal pieces, considered styling, and a quiet luxury boutique experience." />
-    <meta name="twitter:image" content="https://aurelia-xi-ten.vercel.app/og.png" />
+    <meta name="twitter:title" content="Novera | AI Strategy Studio" />
+    <meta name="twitter:description" content="AI strategy, automation, and analytics consulting for teams that need clear execution." />
+    <meta name="twitter:image" content="https://novera-ai.vercel.app/og.png" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <header class="site-header" data-header>
-      <a class="brand-mark" href="/" aria-label="Aurelia home">Aurelia</a>
-      <nav class="desktop-nav" aria-label="Primary navigation">
+    <header class="navbar" data-header>
+      <a class="brand" href="/" aria-label="Novera home">
+        <span class="brand-mark">N</span>
+        <span>Novera</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
         <a href="/" aria-current="page">Home</a>
-        <a href="/pages/shop.html">Shop</a>
+        <a href="/pages/services.html">Services</a>
         <a href="/pages/about.html">About</a>
+        <a href="/pages/pricing.html">Pricing</a>
+        <a href="/pages/blog.html">Blog</a>
         <a href="/pages/contact.html">Contact</a>
       </nav>
-      <button class="icon-button menu-toggle" type="button" aria-label="Open menu" data-menu-toggle>
-        <span></span><span></span>
+      <a class="nav-cta" href="/pages/contact.html">Start a Project</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" data-menu-toggle>
+        <span></span><span></span><span></span>
       </button>
-      <div class="mobile-panel" data-mobile-panel>
-        <a href="/" aria-current="page">Home</a>
-        <a href="/pages/shop.html">Shop</a>
-        <a href="/pages/about.html">About</a>
-        <a href="/pages/contact.html">Contact</a>
-      </div>
-      <button class="cart-button" type="button" aria-label="Cart"><span>0</span></button>
     </header>
 
     <main>
-      <section class="hero-section">
-        <div class="shade"></div>
-        <div class="hero-content">
-          <p class="eyebrow reveal">Autumn / Winter 2026</p>
-          <span class="gold-line reveal"></span>
-          <h1 class="hero-title reveal">Elevating Everyday Luxury</h1>
-          <p class="hero-copy reveal">Curated layers shaped for a quieter kind of confidence.</p>
-          <a class="primary-button reveal" href="/pages/shop.html">
-            Shop the Collection
-            <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </section>
-
-      <section class="intro-section section-space">
-        <div class="section-heading">
-          <span class="gold-line reveal"></span>
-          <h2 class="reveal">Crafted for the Modern Collector</h2>
-          <p class="reveal">Each piece is chosen for proportion, texture, and lasting poise.</p>
-        </div>
-        <div class="banner-grid">
-          <article class="banner-card large reveal">
-            <img src="/assets/images/banner-one.webp" alt="Model in a refined seasonal look" />
-            <div>
-              <p>Signature Collection</p>
-              <h3>The Essentials</h3>
-              <a href="/pages/shop.html">Shop Now</a>
+      <section class="hero section-dark" id="home">
+        <div class="hero-grid"></div>
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-inner">
+          <div class="tag reveal"><span></span> AI consulting for modern teams</div>
+          <h1 class="hero-title reveal">Build the future with intelligent systems.</h1>
+          <p class="hero-copy reveal">We combine strategic thinking and practical AI implementation to simplify work, sharpen decisions, and unlock new operating speed.</p>
+          <div class="hero-actions reveal">
+            <a class="button primary magnetic" href="/pages/contact.html">Get Started <span>↗</span></a>
+            <a class="button secondary magnetic" href="/pages/services.html">Explore Services</a>
+          </div>
+          <div class="hero-panel reveal" aria-label="AI growth snapshot">
+            <div class="panel-top">
+              <div>
+                <span>Automation score</span>
+                <strong data-count="86">0</strong>
+              </div>
+              <div class="pulse"></div>
             </div>
-          </article>
-          <div class="banner-stack">
-            <article class="banner-card reveal">
-              <img src="/assets/images/banner-two.webp" alt="Neutral tailoring detail" />
-              <div>
-                <p>New Arrivals</p>
-                <h3>Refined Details</h3>
-                <a href="/pages/shop.html">Discover Collection</a>
-              </div>
-            </article>
-            <article class="banner-card reveal">
-              <img src="/assets/images/banner-three.webp" alt="Textured luxury accessory" />
-              <div>
-                <p>Limited Edition</p>
-                <h3>Timeless Craft</h3>
-                <a href="/pages/shop.html">Explore Now</a>
-              </div>
-            </article>
+            <div class="chart">
+              <i style="height: 42%"></i><i style="height: 64%"></i><i style="height: 50%"></i><i style="height: 78%"></i><i style="height: 92%"></i><i style="height: 68%"></i>
+            </div>
+            <p>Workflow readiness improved across marketing, support, and analytics.</p>
           </div>
         </div>
       </section>
 
-      <section class="products-section section-space" id="products">
-        <div class="section-heading compact">
-          <span class="gold-line reveal"></span>
-          <h2 class="reveal">The Boutique Edit</h2>
-        </div>
-        <div class="product-grid">
-          <article class="product-card reveal">
-            <a href="/pages/shop.html"><img src="/assets/images/product-one.webp" alt="Heritage wool coat" /></a>
-            <h3>Heritage Wool Coat</h3>
-            <p>$890.00 USD</p>
-          </article>
-          <article class="product-card reveal">
-            <a href="/pages/shop.html"><img src="/assets/images/product-two.webp" alt="Velvet rouge garment" /></a>
-            <h3>Velvet Rouge</h3>
-            <p>$890.00 USD</p>
-          </article>
-          <article class="product-card reveal">
-            <a href="/pages/shop.html"><img src="/assets/images/product-three.webp" alt="Felt fedora hat" /></a>
-            <h3>Felt Fedora Hat</h3>
-            <p>$190.00 USD</p>
-          </article>
-          <article class="product-card reveal">
-            <a href="/pages/shop.html"><img src="/assets/images/product-four.webp" alt="Nappa leather gloves" /></a>
-            <h3>Nappa Gloves</h3>
-            <p>$280.00 USD</p>
-          </article>
-          <article class="product-card reveal">
-            <a href="/pages/shop.html"><img src="/assets/images/product-five.webp" alt="Merino wool scarf" /></a>
-            <h3>Merino Scarf</h3>
-            <p>$220.00 USD</p>
-          </article>
-          <article class="product-card reveal">
-            <a href="/pages/shop.html"><img src="/assets/images/product-six.webp" alt="Silk evening blouse" /></a>
-            <h3>Silk Evening Blouse</h3>
-            <p>$540.00 USD</p>
-          </article>
-        </div>
-        <div class="center-link reveal">
-          <a href="/pages/shop.html">View All Products <span aria-hidden="true">→</span></a>
+      <section class="logo-loop" aria-label="Partner logos">
+        <div class="loop-track">
+          <img src="/assets/media/logo-1.svg" alt="Client logo" />
+          <img src="/assets/media/logo-2.svg" alt="Client logo" />
+          <img src="/assets/media/logo-3.svg" alt="Client logo" />
+          <img src="/assets/media/logo-4.svg" alt="Client logo" />
+          <img src="/assets/media/logo-1.svg" alt="Client logo" />
+          <img src="/assets/media/logo-2.svg" alt="Client logo" />
+          <img src="/assets/media/logo-3.svg" alt="Client logo" />
+          <img src="/assets/media/logo-4.svg" alt="Client logo" />
         </div>
       </section>
 
-      <section class="lookbook-section">
-        <div class="shade"></div>
-        <div class="lookbook-content">
-          <p class="eyebrow reveal">Autumn / Winter 2026</p>
-          <span class="gold-line reveal"></span>
-          <h2 class="reveal">The Winter Edit</h2>
-          <p class="reveal">A concise wardrobe for polished, modern warmth.</p>
-          <a class="primary-button ghost reveal" href="/pages/shop.html">View Collection <span aria-hidden="true">→</span></a>
-        </div>
-      </section>
-
-      <section class="testimonials section-space">
-        <div class="section-heading compact">
-          <span class="gold-line reveal"></span>
-          <p class="section-kicker reveal">What Our Clients Say</p>
-        </div>
-        <div class="testimonial-slider reveal" data-slider>
-          <blockquote class="testimonial active">
-            <span>“</span>
-            <p>Aurelia feels precise without becoming cold. Every piece I bought became part of my weekly uniform.</p>
-            <cite>Marina K., Milan</cite>
-          </blockquote>
-          <blockquote class="testimonial">
-            <span>“</span>
-            <p>The edit is small, intentional, and beautifully styled. It removes all the noise from shopping.</p>
-            <cite>Claire B., Paris</cite>
-          </blockquote>
-          <blockquote class="testimonial">
-            <span>“</span>
-            <p>The fabrics and proportions are quietly exceptional. Nothing feels temporary or overdesigned.</p>
-            <cite>Nadia V., Kyiv</cite>
-          </blockquote>
-          <div class="slider-dots" aria-label="Testimonials">
-            <button class="active" type="button" aria-label="Show testimonial 1"></button>
-            <button type="button" aria-label="Show testimonial 2"></button>
-            <button type="button" aria-label="Show testimonial 3"></button>
+      <section class="split-section section-dark">
+        <div class="container split">
+          <div class="visual-stack reveal">
+            <img class="avatar one" src="/assets/media/hero-icon-one.webp" alt="" />
+            <img class="feature-image" src="/assets/media/section-one.webp" alt="AI consulting team session" />
+            <img class="avatar three" src="/assets/media/hero-icon-three.webp" alt="" />
+          </div>
+          <div>
+            <div class="tag reveal"><span></span> Human insight plus AI</div>
+            <h2 class="reveal">Strategy first. Automation second. Results always visible.</h2>
+            <p class="reveal">Our team maps the moments where AI can remove friction, connect data, and make everyday execution clearer for operators and leadership.</p>
+            <div class="metric-row reveal">
+              <div><strong data-count="42">0</strong><span>Processes mapped</span></div>
+              <div><strong data-count="18">0</strong><span>Weeks to launch</span></div>
+              <div><strong data-count="91">0</strong><span>Adoption score</span></div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="newsletter section-space">
-        <div class="newsletter-inner">
-          <div class="section-heading">
-            <span class="gold-line reveal"></span>
-            <h2 class="reveal">Join Our Inner Circle</h2>
-            <p class="reveal">Private previews, seasonal notes, and early access delivered sparingly.</p>
+      <section class="section-light" id="services">
+        <div class="container section-head">
+          <div class="tag reveal"><span></span> Core services</div>
+          <h2 class="reveal">Practical AI consulting for teams ready to move.</h2>
+          <p class="reveal">Lean engagements, focused systems, and clear handoff documentation.</p>
+        </div>
+        <div class="container service-grid">
+          <article class="service-card reveal">
+            <div class="service-copy">
+              <div class="icon-box"><img src="/assets/media/icon-ai.svg" alt="" /></div>
+              <h3>AI strategy</h3>
+              <p>Identify valuable AI use cases, define operating models, and prioritize the roadmap.</p>
+            </div>
+            <img src="/assets/media/service-ai.webp" alt="AI strategy visual" />
+          </article>
+          <article class="service-card reveal">
+            <div class="service-copy">
+              <div class="icon-box"><img src="/assets/media/icon-pie.svg" alt="" /></div>
+              <h3>Business consulting</h3>
+              <p>Redesign workflows and team rituals around measurable improvements.</p>
+            </div>
+            <img src="/assets/media/service-business.webp" alt="Business consulting visual" />
+          </article>
+          <article class="service-card reveal">
+            <div class="service-copy">
+              <div class="icon-box"><img src="/assets/media/icon-chart.svg" alt="" /></div>
+              <h3>Data analytics</h3>
+              <p>Turn scattered signals into dashboards, forecasts, and decision support.</p>
+            </div>
+            <img src="/assets/media/service-analytics.webp" alt="Analytics consulting visual" />
+          </article>
+        </div>
+      </section>
+
+      <section class="section-light muted">
+        <div class="container expertise">
+          <div>
+            <div class="tag reveal"><span></span> Expertise</div>
+            <h2 class="reveal">A flexible partner for every stage of adoption.</h2>
           </div>
-          <form class="newsletter-form reveal">
-            <input type="email" placeholder="Email address" aria-label="Email address" required />
-            <button type="submit">Subscribe</button>
-          </form>
-          <p class="fine-print reveal">By subscribing, you agree to receive occasional boutique updates. Unsubscribe any time.</p>
-          <span class="gold-line short reveal"></span>
+          <div class="expertise-grid">
+            <div class="expertise-card reveal"><strong>01</strong><h3>Discovery</h3><p>Find the highest-leverage AI opportunities.</p></div>
+            <div class="expertise-card reveal"><strong>02</strong><h3>Design</h3><p>Shape workflows, data paths, and team ownership.</p></div>
+            <div class="expertise-card reveal"><strong>03</strong><h3>Build</h3><p>Launch focused automations and decision tools.</p></div>
+            <div class="expertise-card reveal"><strong>04</strong><h3>Scale</h3><p>Document, train, measure, and expand safely.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing section-dark" id="pricing">
+        <div class="container section-head">
+          <div class="tag reveal"><span></span> Pricing</div>
+          <h2 class="reveal">Choose the right pace.</h2>
+        </div>
+        <div class="container pricing-cards">
+          <article class="price-card reveal">
+            <p>Starter</p><h3>$4.8k</h3><span>Roadmap sprint</span>
+            <ul><li>AI opportunity audit</li><li>Workflow map</li><li>Prioritized launch plan</li></ul>
+            <a href="/pages/contact.html">Get Started</a>
+          </article>
+          <article class="price-card featured reveal">
+            <p>Growth</p><h3>$12k</h3><span>Implementation pod</span>
+            <ul><li>System architecture</li><li>Automation builds</li><li>Team enablement</li></ul>
+            <a href="/pages/contact.html">Get Started</a>
+          </article>
+          <article class="price-card reveal">
+            <p>Scale</p><h3>Custom</h3><span>Embedded AI partner</span>
+            <ul><li>Multi-team rollout</li><li>Analytics layer</li><li>Governance support</li></ul>
+            <a href="/pages/contact.html">Talk to Us</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonials section-light">
+        <div class="container section-head">
+          <div class="tag reveal"><span></span> Testimonials</div>
+          <h2 class="reveal">What clients say about the work.</h2>
+        </div>
+        <div class="testimonial-rail reveal" data-slider>
+          <blockquote class="testimonial-card active">
+            <p>“Novera helped us turn scattered experiments into a real AI operating model.”</p>
+            <cite>Elena M., COO</cite>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>“The team translated strategy into tools our people actually use every week.”</p>
+            <cite>Marcus L., VP Growth</cite>
+          </blockquote>
+          <blockquote class="testimonial-card">
+            <p>“Clear, fast, and grounded. We left with systems, not slides.”</p>
+            <cite>Priya S., Founder</cite>
+          </blockquote>
+          <div class="slider-controls">
+            <button type="button" data-prev aria-label="Previous testimonial">←</button>
+            <button type="button" data-next aria-label="Next testimonial">→</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog-section section-light muted" id="blog">
+        <div class="container section-head">
+          <div class="tag reveal"><span></span> Insights</div>
+          <h2 class="reveal">Notes on AI, operations, and better decisions.</h2>
+        </div>
+        <div class="container blog-grid">
+          <article class="blog-card reveal"><img src="/assets/media/blog-one.webp" alt="AI roadmap article" /><div><span>Strategy</span><h3>Where AI work should begin</h3></div></article>
+          <article class="blog-card reveal"><img src="/assets/media/blog-two.webp" alt="Automation article" /><div><span>Automation</span><h3>Designing workflows people trust</h3></div></article>
+          <article class="blog-card reveal"><img src="/assets/media/blog-three.webp" alt="Analytics article" /><div><span>Analytics</span><h3>Turning signals into decisions</h3></div></article>
+        </div>
+      </section>
+
+      <section class="cta section-light">
+        <div class="container cta-card reveal">
+          <div>
+            <div class="tag"><span></span> Let’s build</div>
+            <h2>Ready to make AI useful?</h2>
+            <p>Bring one messy workflow. We will turn it into a practical starting point.</p>
+          </div>
+          <a class="button primary magnetic" href="/pages/contact.html">Get Started <span>↗</span></a>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="footer-grid">
+    <footer class="footer">
+      <div class="container footer-wrap">
         <div>
-          <a class="footer-brand" href="/">Aurelia</a>
-          <p>Curated with care, designed for modern living.</p>
+          <a class="brand footer-brand" href="/"><span class="brand-mark">N</span><span>Novera</span></a>
+          <p>Adapt faster with AI systems designed around the way your team really works.</p>
         </div>
-        <div>
-          <h2>Navigate</h2>
+        <div class="footer-links">
           <a href="/">Home</a>
+          <a href="/pages/services.html">Services</a>
           <a href="/pages/about.html">About</a>
-          <a href="/pages/shop.html">Shop</a>
+          <a href="/pages/pricing.html">Pricing</a>
+          <a href="/pages/blog.html">Blog</a>
           <a href="/pages/contact.html">Contact</a>
         </div>
-        <div>
-          <h2>Connect</h2>
-          <div class="socials">
-            <a href="https://www.instagram.com/" aria-label="Instagram">Ig</a>
-            <a href="https://www.facebook.com/" aria-label="Facebook">Fb</a>
-            <a href="https://x.com/" aria-label="X">X</a>
-          </div>
-        </div>
+        <form class="footer-form">
+          <label for="email">Subscribe our newsletter</label>
+          <div><input id="email" type="email" placeholder="Enter your email" /><button type="submit">↗</button></div>
+        </form>
       </div>
-      <div class="footer-bottom">
-        <p>Copyright © Aurelia. | Designed by Paliy</p>
+      <div class="container footer-bottom">
+        <p>Copyright © Novera. Designed by Olexandr.</p>
+        <div><a href="/pages/contact.html">Privacy</a><a href="/pages/contact.html">Terms</a></div>
       </div>
     </footer>
 

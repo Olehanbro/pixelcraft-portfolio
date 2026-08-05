@@ -2,8 +2,9 @@ const header = document.querySelector("[data-header]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const reveals = [...document.querySelectorAll(".reveal")];
 const counters = [...document.querySelectorAll("[data-count]")];
-const slider = document.querySelector("[data-slider]");
+const sliders = [...document.querySelectorAll("[data-slider]")];
 const magneticItems = [...document.querySelectorAll(".magnetic")];
+const cardStage = document.querySelector(".card-stage");
 
 const updateHeader = () => {
   header?.classList.toggle("scrolled", window.scrollY > 24);
@@ -36,7 +37,7 @@ const revealObserver = new IntersectionObserver(
 );
 
 reveals.forEach((element, index) => {
-  element.style.transitionDelay = `${Math.min(index % 5, 4) * 70}ms`;
+  element.style.transitionDelay = `${Math.min(index % 6, 5) * 70}ms`;
   revealObserver.observe(element);
 });
 
@@ -47,7 +48,7 @@ const counterObserver = new IntersectionObserver(
       const element = entry.target;
       const target = Number(element.dataset.count || 0);
       const start = performance.now();
-      const duration = 1300;
+      const duration = 1400;
 
       const tick = now => {
         const progress = Math.min((now - start) / duration, 1);
@@ -60,34 +61,48 @@ const counterObserver = new IntersectionObserver(
       counterObserver.unobserve(element);
     });
   },
-  { threshold: 0.6 }
+  { threshold: 0.55 }
 );
 
 counters.forEach(counter => counterObserver.observe(counter));
 
-if (slider) {
-  const slides = [...slider.querySelectorAll(".testimonial-card")];
+sliders.forEach(slider => {
+  const track = slider.querySelector(".testimonial-track");
+  const cards = [...slider.querySelectorAll(".testimonial-card")];
+  const next = slider.querySelector("[data-next]");
+  const prev = slider.querySelector("[data-prev]");
   let active = 0;
 
-  const show = next => {
-    active = (next + slides.length) % slides.length;
-    slides.forEach((slide, index) => slide.classList.toggle("active", index === active));
+  const scrollToCard = index => {
+    if (!track || cards.length === 0) return;
+    active = (index + cards.length) % cards.length;
+    track.scrollTo({ left: cards[active].offsetLeft - track.offsetLeft, behavior: "smooth" });
   };
 
-  slider.querySelector("[data-next]")?.addEventListener("click", () => show(active + 1));
-  slider.querySelector("[data-prev]")?.addEventListener("click", () => show(active - 1));
-  window.setInterval(() => show(active + 1), 4800);
-}
+  next?.addEventListener("click", () => scrollToCard(active + 1));
+  prev?.addEventListener("click", () => scrollToCard(active - 1));
+
+  window.setInterval(() => scrollToCard(active + 1), 5200);
+});
 
 magneticItems.forEach(item => {
   item.addEventListener("pointermove", event => {
     const rect = item.getBoundingClientRect();
     const x = event.clientX - rect.left - rect.width / 2;
     const y = event.clientY - rect.top - rect.height / 2;
-    item.style.transform = `translate(${x * 0.12}px, ${y * 0.18}px)`;
+    item.style.transform = `translate(${x * 0.1}px, ${y * 0.14}px)`;
   });
 
   item.addEventListener("pointerleave", () => {
     item.style.transform = "";
   });
 });
+
+if (cardStage) {
+  window.addEventListener("pointermove", event => {
+    const x = (event.clientX / window.innerWidth - 0.5) * 10;
+    const y = (event.clientY / window.innerHeight - 0.5) * 6;
+    cardStage.style.marginLeft = `${x}px`;
+    cardStage.style.marginBottom = `${y}px`;
+  }, { passive: true });
+}

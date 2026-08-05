@@ -1,8 +1,8 @@
 {
-  "name": "novera",
+  "name": "lumora",
   "version": "1.0.0",
   "private": true,
-  "description": "Novera AI strategy studio website.",
+  "description": "Lumora AI strategy studio website.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",

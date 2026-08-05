@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" rx="56" fill="#080b13"/><circle cx="128" cy="128" r="83" fill="#b8f05f"/><path d="M82 174V82h29l38 52V82h25v92h-27l-40-54v54H82Z" fill="#080b13"/><path d="M64 206h128" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity=".8"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="92" y1="70" x2="424" y2="442" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f4ffb2"/>
+      <stop offset=".52" stop-color="#d5ff58"/>
+      <stop offset="1" stop-color="#8bd447"/>
+    </linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="22" flood-color="#080a0f" flood-opacity=".28"/>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="142" fill="#080a0f"/>
+  <circle cx="256" cy="256" r="160" fill="url(#g)" filter="url(#s)"/>
+  <path d="M193 340V164h45v137h87v39H193Z" fill="#080a0f"/>
+  <path d="M326 178c-44 9-70 32-79 70 33-14 64-12 93 5-22-48-26-55-14-75Z" fill="#080a0f" opacity=".72"/>
+</svg>

@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/(assets|reference-assets)/(.*)",
+      "source": "/generated/(.*)",
       "headers": [
         {
           "key": "Cache-Control",

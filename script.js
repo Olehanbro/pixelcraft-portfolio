@@ -16,12 +16,21 @@ window.addEventListener("scroll", updateHeader, { passive: true });
 menuToggle?.addEventListener("click", () => {
   document.body.classList.toggle("menu-open");
   header?.classList.toggle("menu-visible", document.body.classList.contains("menu-open"));
+  menuToggle.setAttribute("aria-label", document.body.classList.contains("menu-open") ? "Close menu" : "Open menu");
 });
 
 document.querySelectorAll(".nav-links a").forEach(link => {
   link.addEventListener("click", () => {
     document.body.classList.remove("menu-open");
     header?.classList.remove("menu-visible");
+    menuToggle?.setAttribute("aria-label", "Open menu");
+  });
+});
+
+document.querySelectorAll("form").forEach(form => {
+  form.addEventListener("submit", event => {
+    event.preventDefault();
+    form.classList.add("submitted");
   });
 });
 

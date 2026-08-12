@@ -1,18 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Auralis mark">
-  <defs>
-    <linearGradient id="bg" x1="72" y1="40" x2="440" y2="472" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#1f2518"/>
-      <stop offset="1" stop-color="#0f130e"/>
-    </linearGradient>
-    <linearGradient id="leaf" x1="150" y1="112" x2="362" y2="400" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#f1ff9a"/>
-      <stop offset="0.55" stop-color="#dfff63"/>
-      <stop offset="1" stop-color="#95bc45"/>
-    </linearGradient>
-  </defs>
-  <rect width="512" height="512" rx="122" fill="url(#bg)"/>
-  <path d="M256 96c92 62 138 126 138 192 0 78-62 128-138 128s-138-50-138-128c0-66 46-130 138-192Z" fill="url(#leaf)"/>
-  <path d="M256 143c-41 70-61 138-61 204 0 22 5 42 15 60" fill="none" stroke="#10130f" stroke-width="25" stroke-linecap="round"/>
-  <path d="M256 143c41 70 61 138 61 204 0 22-5 42-15 60" fill="none" stroke="#10130f" stroke-width="25" stroke-linecap="round" opacity=".72"/>
-  <circle cx="256" cy="286" r="34" fill="#10130f"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <rect width="128" height="128" rx="32" fill="#faf8f6"/>
+  <path d="M64 16c12.4 18.7 27.7 34 46 46-18.3 12-33.6 27.3-46 46-12.4-18.7-27.7-34-46-46 18.3-12 33.6-27.3 46-46Z" fill="#bda576"/>
+  <circle cx="64" cy="62" r="16" fill="#fff"/>
+  <path d="M54 63c4 8 16 8 20 0" fill="none" stroke="#322f2a" stroke-width="6" stroke-linecap="round"/>
 </svg>

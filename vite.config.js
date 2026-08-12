@@ -5,11 +5,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        services: resolve(__dirname, "pages/services.html"),
-        about: resolve(__dirname, "pages/about.html"),
-        portfolio: resolve(__dirname, "pages/portfolio.html"),
-        contact: resolve(__dirname, "pages/contact.html")
+        main: resolve(__dirname, "index.html")
       }
     }
   }

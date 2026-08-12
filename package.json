@@ -1,8 +1,8 @@
 {
-  "name": "auralis",
+  "name": "liora",
   "version": "1.0.0",
   "private": true,
-  "description": "Auralis modular strategy and brand clarity website.",
+  "description": "Liora pediatric dentistry landing page.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",

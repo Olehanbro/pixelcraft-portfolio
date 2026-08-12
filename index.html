@@ -19,285 +19,167 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="stylesheet" href="/styles.css" />
   </head>
-  <body>
-    <header class="navbar" data-header>
+  <body class="evermind-mode">
+    <header class="navbar ever-nav" data-header>
       <a class="brand" href="/" aria-label="Auralis home">
-        <span class="brand-mark">A</span>
+        <span class="brand-mark brand-flower">✣</span>
         <span>Auralis</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="/" aria-current="page">Home</a>
+        <a href="/" aria-current="page">Overview</a>
         <a href="/pages/services.html">Services</a>
         <a href="/pages/about.html">About</a>
         <a href="/pages/portfolio.html">Work</a>
-        <a href="/pages/contact.html">Contact</a>
       </nav>
-      <a class="nav-cta magnetic" href="/pages/contact.html">Book a Call</a>
+      <a class="nav-cta magnetic" href="/pages/contact.html">Book a call</a>
       <button class="menu-toggle" type="button" aria-label="Open menu" data-menu-toggle>
         <span></span><span></span><span></span>
       </button>
     </header>
 
     <main>
-      <section class="hero section-dark" id="home">
-        <div class="hero-bg">
-          <img src="/assets/media/original/ai-hero.avif" alt="" />
-        </div>
-        <div class="hero-shade"></div>
-        <div class="hero-inner">
-          <p class="eyebrow reveal" data-reveal="up">Modular strategy / Adaptive identity</p>
-          <h1 class="hero-title reveal" data-reveal="up">Clarity scales.<br /><span>Systems breathe.</span></h1>
-          <p class="hero-copy reveal" data-reveal="up">Auralis helps founders, studios, and teams turn scattered ideas into calm digital structures with a clear voice and room to grow.</p>
-          <div class="hero-actions reveal" data-reveal="up">
-            <a class="button secondary magnetic" href="/pages/services.html">Explore Services</a>
-            <a class="button arrow magnetic" href="/pages/contact.html"><span>Book a Call</span><i aria-hidden="true">↗</i></a>
+      <section class="ever-hero" id="home">
+        <video class="ever-hero-media" autoplay muted loop playsinline poster="/assets/media/original/hero-nature-poster.jpg">
+          <source src="/assets/media/original/hero-nature.mp4" type="video/mp4" />
+        </video>
+        <div class="ever-hero-overlay"></div>
+        <div class="ever-hero-line"></div>
+        <div class="ever-hero-content">
+          <div class="ever-hero-left reveal">
+            <p class="eyebrow"><span></span> A modular clarity system</p>
+            <h1>A calm structure for modern brands</h1>
           </div>
-        </div>
-        <div class="card-stage reveal" data-reveal="scale" aria-hidden="true">
-          <div class="card-track track-a">
-            <article><span>01</span><b>Position</b><small>Story / market</small></article>
-            <article><span>02</span><b>System</b><small>Identity / UI</small></article>
-            <article><span>03</span><b>Launch</b><small>Pages / assets</small></article>
-            <article><span>01</span><b>Position</b><small>Story / market</small></article>
-            <article><span>02</span><b>System</b><small>Identity / UI</small></article>
-            <article><span>03</span><b>Launch</b><small>Pages / assets</small></article>
-          </div>
-          <div class="card-track track-b">
-            <article><span>04</span><b>Voice</b><small>Messaging</small></article>
-            <article><span>05</span><b>Flow</b><small>Sections</small></article>
-            <article><span>06</span><b>Proof</b><small>Signals</small></article>
-            <article><span>04</span><b>Voice</b><small>Messaging</small></article>
-            <article><span>05</span><b>Flow</b><small>Sections</small></article>
-            <article><span>06</span><b>Proof</b><small>Signals</small></article>
-          </div>
-          <div class="card-track track-c">
-            <article><span>07</span><b>Content</b><small>Pages / CMS</small></article>
-            <article><span>08</span><b>Motion</b><small>Scroll / hover</small></article>
-            <article><span>09</span><b>Handoff</b><small>Guides / files</small></article>
-            <article><span>07</span><b>Content</b><small>Pages / CMS</small></article>
-            <article><span>08</span><b>Motion</b><small>Scroll / hover</small></article>
-            <article><span>09</span><b>Handoff</b><small>Guides / files</small></article>
-          </div>
-        </div>
-        <div class="rating-pill reveal" data-reveal="up">
-          <span>Trusted by 500+ thoughtful teams</span>
-          <b aria-hidden="true">AURALIS</b>
-        </div>
-      </section>
-
-      <section class="logo-loop" aria-label="Project capabilities">
-        <div class="loop-track">
-          <span>Strategy</span><span>Identity</span><span>Messaging</span><span>Web Systems</span><span>Motion</span><span>Launch</span>
-          <span>Strategy</span><span>Identity</span><span>Messaging</span><span>Web Systems</span><span>Motion</span><span>Launch</span>
-        </div>
-      </section>
-
-      <section class="section-about section-light">
-        <div class="container center">
-          <div class="tag reveal"><span></span> About us</div>
-          <div class="title-wrap reveal" data-reveal="up">
-            <h2>We</h2><h2>turn</h2><h2>complex</h2><h2>ideas</h2><h2>into</h2>
-            <span class="title-icon">+</span>
-            <h2>quiet</h2><h2>momentum</h2><h2 class="muted-word">from</h2>
-            <span class="title-icon dark">↗</span>
-            <h2 class="muted-word">first</h2><h2 class="muted-word">signal</h2>
-          </div>
-        </div>
-        <div class="container about-grid">
-          <article class="about-card reveal" data-reveal="scale">
-            <img src="/assets/media/original/card-about-img.avif" alt="Abstract sustainable brand system" />
-            <div class="about-card-top">
-              <strong>Auralis</strong>
-              <span>▥</span>
+          <div class="ever-hero-right reveal" data-reveal="up">
+            <p>Auralis gives growing teams a composed brand framework: positioning, visual rhythm, reusable pages, and soft motion that feels alive without becoming loud.</p>
+            <div class="hero-actions compact-actions">
+              <a class="button arrow magnetic" href="/pages/services.html"><span>Explore services</span><i aria-hidden="true">↗</i></a>
+              <a class="button glass magnetic" href="/pages/contact.html"><span class="mini-person"></span>Book a call</a>
             </div>
-            <div class="about-float">
-              <strong data-count="140">0</strong><b>+</b>
-              <p>Brand, product, and content systems shaped into a flexible foundation.</p>
-            </div>
+          </div>
+        </div>
+        <div class="ever-hero-bottom">
+          <div class="floating-pages">
+            <span class="brand-mark brand-flower">✣</span>
+            <button type="button">Pages</button>
+            <a href="/pages/contact.html">Brief</a>
+          </div>
+          <p>100% clean code. Fully modular.</p>
+          <p>Crafted by Olexandr</p>
+        </div>
+      </section>
+
+      <section class="system-statement section-light">
+        <div class="container statement-grid">
+          <div class="tag reveal"><span></span> System</div>
+          <h2 class="reveal">Not just pages. A quiet operating layer for your brand story.</h2>
+          <p class="reveal">Every block is designed to be rearranged, expanded, and handed off without losing the feeling of the whole.</p>
+        </div>
+        <div class="container module-board reveal" data-reveal="scale">
+          <article class="module-card image-card tall">
+            <img src="/assets/media/original/card-about-img.avif" alt="Brand planning board" />
+            <span>01 / Foundation</span>
           </article>
-          <article class="stat-card reveal">
-            <span>Modular section library</span>
-            <strong><span data-count="100">0</span>%</strong>
-            <div class="mini-lines"><i></i><i></i><i></i><i></i></div>
+          <article class="module-card lime-card">
+            <span>100%</span>
+            <p>Modular sections prepared for future asset swaps.</p>
           </article>
-          <article class="quote-card reveal">
-            <p>“They gave our messy idea a calm structure and a voice we could actually use.”</p>
-            <span>Founder note</span>
+          <article class="module-card">
+            <h3>Messaging</h3>
+            <p>Sharper words for teams who need the offer understood quickly.</p>
           </article>
-          <article class="data-card reveal">
-            <span>Reusable blocks</span>
-            <strong><span data-count="520">0</span>+</strong>
-            <p>Organized for clear publishing, iteration, and growth.</p>
+          <article class="module-card image-card">
+            <img src="/assets/media/original/service-img.webp" alt="Interface detail" />
           </article>
-          <article class="data-card reveal">
-            <span>First clarity sprint</span>
-            <strong><span data-count="24">0</span>h</strong>
-            <p>Short cycles for messaging, layout direction, and decisions.</p>
+          <article class="module-card dark-card">
+            <h3>Motion</h3>
+            <p>Scroll reveals, magnetic buttons, soft parallax, and calm loops.</p>
+          </article>
+          <article class="module-card">
+            <h3>Handoff</h3>
+            <p>Clean source, replaceable imagery, and obvious content slots.</p>
           </article>
         </div>
       </section>
 
-      <section class="section-services section-dark" id="services">
-        <div class="container section-head">
-          <div>
+      <section class="logo-wall" aria-label="Auralis capabilities">
+        <div class="container logo-wall-grid reveal">
+          <span>Positioning</span>
+          <span>Identity</span>
+          <span>Content</span>
+          <span>Launch</span>
+          <span>Motion</span>
+          <span>Systems</span>
+          <span>Proof</span>
+          <span>Handoff</span>
+        </div>
+      </section>
+
+      <section class="editorial-section section-light">
+        <div class="container editorial-grid">
+          <div class="editorial-copy">
             <div class="tag reveal"><span></span> Services</div>
-            <h2 class="reveal">Focused services for brands that need calm structure</h2>
+            <h2 class="reveal">A focused studio stack for clearer launches</h2>
+            <p class="reveal">We keep the workflow small, senior, and visual: define the story, shape the system, then turn it into launch-ready pages.</p>
           </div>
-          <div class="section-side reveal">
-            <p>From first positioning to polished launch pages, every scope is built around clarity, warmth, and reusable systems.</p>
-            <a class="button arrow magnetic" href="/pages/contact.html"><span>Start a Brief</span><i>↗</i></a>
+          <div class="service-list reveal">
+            <a href="/pages/services.html"><span>01</span><b>Strategy map</b><small>Positioning, audience logic, offer clarity</small></a>
+            <a href="/pages/services.html"><span>02</span><b>Modular design</b><small>Visual rhythm, components, responsive states</small></a>
+            <a href="/pages/services.html"><span>03</span><b>Launch pages</b><small>Content structure, proof blocks, OG assets</small></a>
           </div>
-        </div>
-        <div class="container service-grid">
-          <article class="service-card reveal">
-            <div class="service-image service-one"></div>
-            <div class="service-copy">
-              <div class="icon-box">01</div>
-              <h3>Strategy</h3>
-              <p>Positioning, audience logic, offer clarity, and a concise narrative for the whole system.</p>
-            </div>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-image service-two"></div>
-            <div class="service-copy">
-              <div class="icon-box">02</div>
-              <h3>Design system</h3>
-              <p>Reusable sections, visual rules, motion language, and responsive components.</p>
-            </div>
-          </article>
-          <article class="service-card reveal">
-            <div class="service-image service-three"></div>
-            <div class="service-copy">
-              <div class="icon-box">03</div>
-              <h3>Launch content</h3>
-              <p>Pages, story modules, proof points, and handoff notes ready for real assets.</p>
-            </div>
-          </article>
         </div>
       </section>
 
-      <section class="section-expertise section-light">
-        <div class="container expertise-grid">
-          <div class="expertise-copy">
-            <div class="tag reveal"><span></span> Method</div>
-            <h2 class="reveal">Every decision stays visible before it becomes a page</h2>
-            <p class="reveal">We align story, interface, content, and motion around one rhythm: fewer surprises, faster approvals, better handoff.</p>
+      <section class="work-feature section-dark">
+        <div class="container work-feature-grid">
+          <div>
+            <div class="tag reveal"><span></span> Work</div>
+            <h2 class="reveal">Built for teams who want the brand to feel organized before it grows.</h2>
           </div>
-          <div class="dashboard-stack reveal" data-reveal="scale">
-            <div class="expense-card">
-              <span>System map</span>
-              <strong>42 <em>/ modules</em></strong>
-              <div class="expense-row"><b>Core story</b><span>Approved direction</span><strong>76%</strong></div>
-              <div class="expense-row"><b>Page flow</b><span>Structure in motion</span><strong>58%</strong></div>
-              <div class="expense-row"><b>Asset guide</b><span>Ready for replacement</span><strong>31%</strong></div>
-            </div>
-            <div class="performance-card">
-              <span>Clarity score</span>
-              <small>Last 30 days</small>
-              <strong><span data-count="94">0</span>%</strong>
-              <p>Decisions closed in sprint</p>
-            </div>
-            <article class="expertise-card">
-              <h3>Structure without noise</h3>
-              <p>Notes become sections, sections become pages, and pages become a coherent system.</p>
+          <div class="work-stack reveal" data-reveal="scale">
+            <article>
+              <img src="/assets/media/original/blog-img-1_1x.webp" alt="Climate studio launch visual" />
+              <div><span>Identity</span><h3>Quiet launch system for a climate studio</h3></div>
+            </article>
+            <article>
+              <img src="/assets/media/original/blog-img-2_1x.webp" alt="Product team story library" />
+              <div><span>Content</span><h3>Modular story library for a product team</h3></div>
+            </article>
+            <article>
+              <img src="/assets/media/original/blog-img-3_1x.webp" alt="Consulting collective growth pages" />
+              <div><span>Growth</span><h3>Scalable pages for a consulting collective</h3></div>
             </article>
           </div>
         </div>
-        <div class="container marquee-words" aria-hidden="true">
-          <div><span>Strategy</span><span>Identity</span><span>Content</span><span>Motion</span><span>Systems</span><span>Launch</span><span>Proof</span><span>Handoff</span></div>
-          <div><span>Strategy</span><span>Identity</span><span>Content</span><span>Motion</span><span>Systems</span><span>Launch</span><span>Proof</span><span>Handoff</span></div>
-        </div>
       </section>
 
-      <section class="pricing section-light">
-        <div class="container section-head">
-          <div>
-            <div class="tag reveal"><span></span> Engagements</div>
-            <h2 class="reveal">Choose the level of support your idea needs</h2>
+      <section class="cta split-cta section-light">
+        <div class="container split-cta-grid">
+          <div class="split-cta-media reveal">
+            <img src="/assets/media/original/section-1.webp" alt="Creative lead considering a system board" />
           </div>
-          <div class="section-side reveal">
-            <p>Each engagement is shaped around your current clarity, speed, and launch pressure.</p>
-            <a class="button dark magnetic" href="/pages/contact.html">Request Scope</a>
+          <div class="split-cta-copy">
+            <div class="tag reveal"><span></span> Contact</div>
+            <h2 class="reveal">Bring the idea. We will bring the system.</h2>
+            <p class="reveal">Share the audience, goal, and pressure points. Auralis will map the first clear route from brief to launch.</p>
+            <a class="button dark magnetic reveal" href="/pages/contact.html">Start a brief</a>
           </div>
-        </div>
-        <div class="container pricing-cards">
-          <article class="price-card reveal"><p>Clarity</p><span>For early teams shaping the first clear story.</span><h3>2-3<small> weeks</small></h3><ul><li>Positioning scan</li><li>Message map</li><li>Section outline</li><li>Decision memo</li></ul><a href="/pages/contact.html">Start Clarity</a></article>
-          <article class="price-card featured reveal"><p>System</p><span>For teams ready to turn the story into pages.</span><h3>Launch<small> sprint</small></h3><ul><li>Page architecture</li><li>Reusable sections</li><li>Motion rules</li><li>OG and handoff</li></ul><a href="/pages/contact.html">Plan System</a></article>
-          <article class="price-card reveal"><p>Partnership</p><span>For brands building content over time.</span><h3>12<small> months</small></h3><ul><li>Content rhythm</li><li>Standards library</li><li>Growth pages</li><li>Monthly reviews</li></ul><a href="/pages/contact.html">Build Partnership</a></article>
-        </div>
-      </section>
-
-      <section class="testimonials section-dark">
-        <div class="container section-head">
-          <div>
-            <div class="tag reveal"><span></span> Testimonials</div>
-            <h2 class="reveal">Trusted where clarity changes momentum</h2>
-          </div>
-          <p class="section-side reveal">Short notes from founders, operators, and creative leads who need a clear system.</p>
-        </div>
-        <div class="testimonial-shell reveal" data-slider>
-          <div class="testimonial-track">
-            <article class="testimonial-card"><div class="testimonial-visual one"></div><div><b>“</b><p>Auralis gave our offer a structure people understood immediately.</p><span>- Mira Holt, Founder</span></div></article>
-            <article class="testimonial-card"><div class="testimonial-visual two"></div><div><b>“</b><p>The system felt light, modular, and unusually easy to keep using.</p><span>- Theo Kane, Studio Lead</span></div></article>
-            <article class="testimonial-card"><div class="testimonial-visual three"></div><div><b>“</b><p>They turned scattered notes into a launch-ready story without noise.</p><span>- Lena Brooks, Product Lead</span></div></article>
-            <article class="testimonial-card"><div class="testimonial-visual four"></div><div><b>“</b><p>Clear pages, soft motion, and a handoff that made the next sprint simple.</p><span>- Jonah Vale, Creative Director</span></div></article>
-          </div>
-          <div class="slider-controls">
-            <button type="button" data-prev aria-label="Previous testimonial">←</button>
-            <button type="button" data-next aria-label="Next testimonial">→</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="blog-section section-light">
-        <div class="container section-head">
-          <div>
-            <div class="tag reveal"><span></span> Work</div>
-            <h2 class="reveal">Selected work with clear outcomes</h2>
-          </div>
-          <div class="section-side reveal">
-            <p>A compact view of how complex ideas become calm, scalable systems.</p>
-            <a class="button dark magnetic" href="/pages/portfolio.html">View Work</a>
-          </div>
-        </div>
-        <div class="container blog-grid">
-          <article class="blog-card reveal"><div class="project-visual one"></div><div><span>Identity</span><h3>Quiet launch system for a climate studio</h3></div></article>
-          <article class="blog-card reveal"><div class="project-visual two"></div><div><span>Content</span><h3>Modular story library for a product team</h3></div></article>
-          <article class="blog-card reveal"><div class="project-visual three"></div><div><span>Growth</span><h3>Scalable pages for a consulting collective</h3></div></article>
-        </div>
-      </section>
-
-      <section class="cta section-dark">
-        <div class="cta-bg"><img src="/assets/media/original/section-1.webp" alt="" /></div>
-        <div class="container cta-inner">
-          <div class="cta-top reveal">
-            <span>Building a clearer brand?</span>
-            <div class="mini-avatars large"><i></i><i></i><i></i></div>
-          </div>
-          <h2 class="reveal">Bring the idea.<br />We will bring the system.</h2>
-          <p class="reveal">Share the goal, audience, and pressure points. Auralis will map the first clear route from brief to launch.</p>
-          <a class="button arrow magnetic reveal" href="/pages/contact.html"><span>Start a Brief</span><i>↗</i></a>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer ever-footer">
       <div class="container footer-wrap">
         <div class="footer-content">
-          <a class="brand footer-brand" href="/"><span class="brand-mark">A</span><span>Auralis</span></a>
+          <a class="brand footer-brand" href="/"><span class="brand-mark brand-flower">✣</span><span>Auralis</span></a>
           <p>Modular brand systems for teams that need clarity without noise.</p>
         </div>
         <div class="footer-links">
-          <a href="/">Home</a>
+          <a href="/">Overview</a>
           <a href="/pages/services.html">Services</a>
           <a href="/pages/about.html">About</a>
           <a href="/pages/portfolio.html">Work</a>
           <a href="/pages/contact.html">Contact</a>
         </div>
-        <form class="footer-form">
-          <label for="email">Brief notes</label>
-          <div><input id="email" type="email" placeholder="Enter your email" /><button type="submit" aria-label="Submit">↗</button></div>
-        </form>
       </div>
       <div class="container footer-bottom">
         <p>© 2026 Auralis. Designed by Olexandr.</p>

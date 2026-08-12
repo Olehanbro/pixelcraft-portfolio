@@ -1,8 +1,8 @@
 {
-  "name": "aureon",
+  "name": "auralis",
   "version": "1.0.0",
   "private": true,
-  "description": "Aureon construction and industrial delivery website.",
+  "description": "Auralis modular strategy and brand clarity website.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",

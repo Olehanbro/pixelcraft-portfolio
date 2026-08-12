@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap");
 
 :root {
-  --ink: #080a0c;
-  --charcoal: #11161a;
-  --steel: #5d748a;
-  --copper: #c88a4a;
-  --paper: #eff2e8;
-  --soft: #dfe6d9;
+  --ink: #10130f;
+  --charcoal: #151912;
+  --steel: #7a8f7d;
+  --copper: #a9875a;
+  --paper: #f2f0e4;
+  --soft: #e3e6d2;
   --white: #ffffff;
-  --line: rgba(8, 10, 12, 0.14);
+  --line: rgba(16, 19, 15, 0.14);
   --line-light: rgba(255, 255, 255, 0.18);
   --muted: #68706c;
-  --lime: #d8ff4f;
-  --lime-deep: #9ad13f;
+  --lime: #dfff63;
+  --lime-deep: #96bc45;
   --container: min(1180px, calc(100vw - 48px));
 }
 
@@ -70,7 +70,7 @@ button, input, textarea { font: inherit; }
   border: 1px solid var(--line-light);
   border-radius: 999px;
   color: var(--white);
-  background: rgba(8, 10, 12, 0.55);
+  background: rgba(16, 19, 15, 0.58);
   backdrop-filter: blur(18px);
   transform: translateX(-50%);
   transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
@@ -79,7 +79,7 @@ button, input, textarea { font: inherit; }
 .navbar.scrolled,
 .navbar.menu-visible {
   color: var(--ink);
-  background: rgba(239, 242, 232, 0.95);
+  background: rgba(242, 240, 228, 0.95);
   border-color: var(--line);
   box-shadow: 0 20px 70px rgba(8, 10, 12, 0.08);
 }
@@ -182,7 +182,7 @@ h1, h2, h3, .hero-title {
 
 .hero {
   position: relative;
-  min-height: 1120px;
+  min-height: 1080px;
   padding: 160px 0 80px;
   overflow: hidden;
   border-bottom-right-radius: 30px;
@@ -199,15 +199,16 @@ h1, h2, h3, .hero-title {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.62;
+  opacity: 0.52;
   transform: scale(1.04);
   animation: heroBreath 14s ease-in-out infinite;
 }
 
 .hero-shade {
   background:
-    linear-gradient(180deg, rgba(8,10,12,0.8) 0%, rgba(8,10,12,0.52) 34%, rgba(8,10,12,0.96) 86%),
-    linear-gradient(90deg, rgba(8,10,12,0.3), transparent 35%, rgba(8,10,12,0.26));
+    linear-gradient(180deg, rgba(16,19,15,0.78) 0%, rgba(16,19,15,0.42) 38%, rgba(16,19,15,0.96) 88%),
+    radial-gradient(circle at 50% 22%, rgba(223,255,99,0.18), transparent 35%),
+    linear-gradient(90deg, rgba(16,19,15,0.18), transparent 35%, rgba(16,19,15,0.22));
 }
 
 .hero-inner {
@@ -723,7 +724,7 @@ h1, h2, h3, .hero-title {
 .testimonial-visual,
 .project-visual {
   width: 100%;
-  background-image: linear-gradient(180deg, rgba(8,10,12,0.02), rgba(8,10,12,0.22)), url("/assets/media/aureon-hero.png");
+  background-image: linear-gradient(180deg, rgba(16,19,15,0.02), rgba(16,19,15,0.22)), url("/assets/media/original/ai-hero.avif");
   background-size: cover;
   transition: transform 0.8s cubic-bezier(.2,.8,.2,1);
 }
@@ -739,9 +740,20 @@ h1, h2, h3, .hero-title {
   transform: scale(1.045);
 }
 
-.service-one { background-position: left center; }
-.service-two { background-position: center center; }
-.service-three { background-position: right center; }
+.service-one {
+  background-image: linear-gradient(180deg, rgba(16,19,15,0.02), rgba(16,19,15,0.22)), url("/assets/media/original/service-img.webp");
+  background-position: center center;
+}
+
+.service-two {
+  background-image: linear-gradient(180deg, rgba(16,19,15,0.02), rgba(16,19,15,0.22)), url("/assets/media/original/service-img-2.webp");
+  background-position: center center;
+}
+
+.service-three {
+  background-image: linear-gradient(180deg, rgba(16,19,15,0.02), rgba(16,19,15,0.22)), url("/assets/media/original/service-img-3.webp");
+  background-position: center center;
+}
 
 .service-copy {
   padding: 26px 14px 12px;
@@ -990,10 +1002,25 @@ h1, h2, h3, .hero-title {
   filter: saturate(0.9);
 }
 
-.testimonial-visual.one { background-position: left center; }
-.testimonial-visual.two { background-position: 42% center; }
-.testimonial-visual.three { background-position: 66% center; }
-.testimonial-visual.four { background-position: right center; }
+.testimonial-visual.one {
+  background-image: linear-gradient(180deg, rgba(16,19,15,0.02), rgba(16,19,15,0.22)), url("/assets/media/original/testimonials-img-1-p-500.avif");
+  background-position: center center;
+}
+
+.testimonial-visual.two {
+  background-image: linear-gradient(180deg, rgba(16,19,15,0.02), rgba(16,19,15,0.22)), url("/assets/media/original/testimonials-img-2.avif");
+  background-position: center center;
+}
+
+.testimonial-visual.three {
+  background-image: linear-gradient(180deg, rgba(16,19,15,0.02), rgba(16,19,15,0.22)), url("/assets/media/original/testimonials-img-3.avif");
+  background-position: center center;
+}
+
+.testimonial-visual.four {
+  background-image: linear-gradient(180deg, rgba(16,19,15,0.02), rgba(16,19,15,0.22)), url("/assets/media/original/testimonials-img-4.avif");
+  background-position: center center;
+}
 
 .testimonial-card::after {
   content: "";
@@ -1067,9 +1094,20 @@ h1, h2, h3, .hero-title {
   height: 100%;
 }
 
-.project-visual.one { background-position: left center; }
-.project-visual.two { background-position: center center; }
-.project-visual.three { background-position: right center; }
+.project-visual.one {
+  background-image: linear-gradient(180deg, rgba(16,19,15,0.02), rgba(16,19,15,0.22)), url("/assets/media/original/blog-img-1_1x.webp");
+  background-position: center center;
+}
+
+.project-visual.two {
+  background-image: linear-gradient(180deg, rgba(16,19,15,0.02), rgba(16,19,15,0.22)), url("/assets/media/original/blog-img-2_1x.webp");
+  background-position: center center;
+}
+
+.project-visual.three {
+  background-image: linear-gradient(180deg, rgba(16,19,15,0.02), rgba(16,19,15,0.22)), url("/assets/media/original/blog-img-3_1x.webp");
+  background-position: center center;
+}
 
 .blog-card::after {
   content: "";
@@ -1482,7 +1520,7 @@ h1, h2, h3, .hero-title {
   }
 
   .hero {
-    min-height: 850px;
+    min-height: 980px;
     padding-top: 128px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -1499,15 +1537,19 @@ h1, h2, h3, .hero-title {
     align-items: stretch;
   }
 
+  .hero-actions {
+    width: min(100%, 280px);
+  }
+
   .button {
     width: 100%;
   }
 
   .card-stage {
-    bottom: 116px;
+    bottom: 60px;
     width: 780px;
     height: 350px;
-    transform: translateX(-50%) rotateX(58deg) rotateZ(-8deg) scale(0.82);
+    transform: translateX(-50%) rotateX(58deg) rotateZ(-8deg) scale(0.72);
   }
 
   .card-stage.reveal.in-view {

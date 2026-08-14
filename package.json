@@ -1,8 +1,8 @@
 {
-  "name": "liora",
+  "name": "mentora",
   "version": "1.0.0",
   "private": true,
-  "description": "Liora pediatric dentistry landing page.",
+  "description": "Mentora education coaching landing page by Olexandr.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",

@@ -1,8 +1,8 @@
 {
-  "name": "mentora",
+  "name": "vireon",
   "version": "1.0.0",
   "private": true,
-  "description": "Mentora education coaching landing page by Olexandr.",
+  "description": "Vireon advanced science and AI consulting website by Olexandr.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",

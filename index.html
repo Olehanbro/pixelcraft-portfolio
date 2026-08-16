@@ -11,7 +11,7 @@
     <meta name="author" content="PixelCraft" />
     <meta name="creator" content="PixelCraft" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#f8f7f3" />
+    <meta name="theme-color" content="#180821" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="uk_UA" />
     <meta property="og:site_name" content="PixelCraft" />
@@ -53,21 +53,25 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-banner">
           <div class="hero-copy reveal-up">
+            <p class="hero-kicker">Portfolio N° 01 · Web development · 2026</p>
             <h1 id="hero-title">Сайти, що виглядають впевнено.</h1>
             <a class="primary-link" href="#work">Дивитися роботи</a>
           </div>
 
           <div class="hero-art reveal-up" aria-label="Місце для портретного фото власника">
-            <div class="hero-preview-card is-top">
-              <img src="assets/portfolio/vireon-live-og.png" alt="Vireon website preview" />
-            </div>
             <figure class="portrait-frame" data-owner-portrait>
               <div class="portrait-placeholder">
                 <span>Фото</span>
+                <small>майбутній портрет</small>
               </div>
             </figure>
-            <div class="hero-preview-card is-bottom">
-              <img src="assets/portfolio/auralis-live-og.png" alt="Auralis website preview" />
+            <div class="hero-preview-row" aria-label="Featured portfolio previews">
+              <div class="hero-preview-card">
+                <img src="assets/portfolio/kursor-strategy-og.png" alt="Kursor Strategy website preview" />
+              </div>
+              <div class="hero-preview-card">
+                <img src="assets/portfolio/vireon-live-og.png" alt="Vireon website preview" />
+              </div>
             </div>
           </div>
         </div>
@@ -123,8 +127,28 @@
     </main>
 
     <footer class="site-footer">
-      <p>© 2026 <span data-brand-name>PixelCraft</span>. Selected websites and live project links.</p>
-      <a href="#top">До початку</a>
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="brand footer-logo" href="#top" data-brand-name>PixelCraft</a>
+          <p>Портфоліо веброзробника з добіркою живих сайтів і готовністю до нових кейсів.</p>
+        </div>
+        <div class="footer-cta">
+          <span>— Співпраця</span>
+          <h2>Є ідея для наступної роботи?</h2>
+          <a class="primary-link" href="mailto:sashamischishin2005@gmail.com">Написати</a>
+        </div>
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#work">Роботи</a>
+          <a href="#approach">Підхід</a>
+          <a href="#contact">Контакт</a>
+          <a href="#top">До початку</a>
+        </nav>
+        <div class="footer-links" aria-label="Contact links">
+          <a href="mailto:sashamischishin2005@gmail.com">Email</a>
+          <a href="https://github.com/Olehanbro" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+        <p class="footer-copy">© 2026 <span data-brand-name>PixelCraft</span>. Selected websites and live project links.</p>
+      </div>
     </footer>
 
     <script type="module" src="script.js"></script>

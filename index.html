@@ -6,7 +6,7 @@
     <title>PixelCraft | Портфоліо веброзробника</title>
     <meta
       name="description"
-      content="PixelCraft - світле портфоліо веброзробника з добіркою живих сайтів, прев'ю проєктів і посиланнями на готові роботи."
+      content="PixelCraft - портфоліо веброзробника з живими сайтами, каталогом проєктів, сферами робіт і деталями кожного кейсу."
     />
     <meta name="author" content="PixelCraft" />
     <meta name="creator" content="PixelCraft" />
@@ -18,30 +18,30 @@
     <meta property="og:title" content="PixelCraft | Портфоліо веброзробника" />
     <meta
       property="og:description"
-      content="Добірка сайтів із живими посиланнями, короткими описами та кількома прев'ю для кожної роботи."
+      content="Добірка живих сайтів із каталогом, фільтрами за сферами та окремими сторінками кейсів."
     />
-    <meta property="og:image" content="og.png" />
+    <meta property="og:image" content="/og.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="PixelCraft Portfolio" />
     <meta name="twitter:description" content="Selected websites, screenshots, and live project links." />
-    <meta name="twitter:image" content="og.png" />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="preload" href="assets/portfolio/vireon-live-og.png" as="image" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta name="twitter:image" content="/og.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preload" href="/assets/portfolio/kursor-strategy-og.png" as="image" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
     <header class="site-header" data-header>
-      <a class="brand" href="#top" aria-label="PixelCraft home" data-brand-name>PixelCraft</a>
+      <a class="brand" href="/" aria-label="PixelCraft home" data-link data-brand-name>PixelCraft</a>
 
       <nav class="nav" aria-label="Primary navigation" data-menu>
-        <a href="#work">Роботи</a>
-        <a href="#approach">Підхід</a>
-        <a href="#contact">Контакт</a>
+        <a href="/" data-link>Головна</a>
+        <a href="/projects" data-link>Усі проєкти</a>
+        <a href="/#fields" data-link>Сфери</a>
       </nav>
 
       <div class="header-actions">
-        <a class="ghost-link" href="#work">Портфоліо</a>
+        <a class="ghost-link" href="/projects" data-link>Каталог</a>
         <button class="menu-button" type="button" aria-label="Open menu" data-menu-toggle>
           <span></span>
           <span></span>
@@ -49,100 +49,10 @@
       </div>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-banner">
-          <div class="hero-copy reveal-up">
-            <p class="hero-kicker">Portfolio N° 01 · Web development · 2026</p>
-            <h1 id="hero-title">Сайти, що виглядають впевнено.</h1>
-            <a class="primary-link" href="#work">Дивитися роботи</a>
-          </div>
+    <main id="app"></main>
 
-          <div class="hero-art reveal-up" aria-label="Місце для портретного фото власника">
-            <figure class="portrait-frame" data-owner-portrait>
-              <div class="portrait-placeholder">
-                <span>Фото</span>
-                <small>майбутній портрет</small>
-              </div>
-            </figure>
-          </div>
-        </div>
-      </section>
+    <footer class="site-footer" data-footer></footer>
 
-      <section class="featured-strip" aria-label="Featured previews" data-featured-strip></section>
-
-      <section class="work" id="work" aria-labelledby="work-title">
-        <div class="section-heading reveal-up">
-          <p class="eyebrow">Вибрані роботи</p>
-          <h2 id="work-title">Портфоліо, побудоване навколо самих проєктів.</h2>
-        </div>
-
-        <div class="work-toolbar reveal-up">
-          <div class="filter-bar" aria-label="Project filters" data-filters></div>
-          <p data-visible-count></p>
-        </div>
-
-        <div class="project-grid" data-projects></div>
-      </section>
-
-      <section class="approach" id="approach" aria-labelledby="approach-title">
-        <div class="section-heading reveal-up">
-          <p class="eyebrow">Структура</p>
-          <h2 id="approach-title">Додавання нової роботи не потребує адмін-панелі.</h2>
-        </div>
-        <div class="approach-grid">
-          <article class="approach-item reveal-up">
-            <span>01</span>
-            <h3>Один запис у даних</h3>
-            <p>Назва, опис, категорія, посилання та масив скриншотів живуть у `projects`.</p>
-          </article>
-          <article class="approach-item reveal-up">
-            <span>02</span>
-            <h3>Компонентна збірка</h3>
-            <p>Картки, фільтри, лічильники й верхній блок рендеряться з однієї структури.</p>
-          </article>
-          <article class="approach-item reveal-up">
-            <span>03</span>
-            <h3>Заміна бренду</h3>
-            <p>Тимчасову назву PixelCraft винесено в `brandConfig`, щоб швидко оновити її пізніше.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="contact" id="contact" aria-labelledby="contact-title">
-        <div class="contact-copy reveal-up">
-          <p class="eyebrow">Контакт</p>
-          <h2 id="contact-title">Готовий додати наступний сайт у портфоліо.</h2>
-        </div>
-        <div class="contact-actions reveal-up" data-contact-actions></div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-brand">
-          <a class="brand footer-logo" href="#top" data-brand-name>PixelCraft</a>
-          <p>Портфоліо веброзробника з добіркою живих сайтів і готовністю до нових кейсів.</p>
-        </div>
-        <div class="footer-cta">
-          <span>— Співпраця</span>
-          <h2>Є ідея для наступної роботи?</h2>
-          <a class="primary-link" href="mailto:sashamischishin2005@gmail.com">Написати</a>
-        </div>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <a href="#work">Роботи</a>
-          <a href="#approach">Підхід</a>
-          <a href="#contact">Контакт</a>
-          <a href="#top">До початку</a>
-        </nav>
-        <div class="footer-links" aria-label="Contact links">
-          <a href="mailto:sashamischishin2005@gmail.com">Email</a>
-          <a href="https://github.com/Olehanbro" target="_blank" rel="noreferrer">GitHub</a>
-        </div>
-        <p class="footer-copy">© 2026 <span data-brand-name>PixelCraft</span>. Selected websites and live project links.</p>
-      </div>
-    </footer>
-
-    <script type="module" src="script.js"></script>
+    <script type="module" src="/script.js"></script>
   </body>
 </html>

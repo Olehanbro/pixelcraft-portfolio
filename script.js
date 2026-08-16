@@ -1,7 +1,12 @@
 const brandConfig = {
   name: "PixelCraft",
   email: "sashamischishin2005@gmail.com",
-  github: "https://github.com/Olehanbro"
+  github: "https://github.com/Olehanbro",
+  ownerPortrait: {
+    // Replace this path with a real portrait later, for example: "assets/owner-portrait.jpg".
+    image: "",
+    alt: "Portrait of the portfolio owner"
+  }
 };
 
 const projects = [
@@ -90,7 +95,7 @@ const filterMount = document.querySelector("[data-filters]");
 const visibleCount = document.querySelector("[data-visible-count]");
 const featuredStrip = document.querySelector("[data-featured-strip]");
 const contactActions = document.querySelector("[data-contact-actions]");
-const projectCount = document.querySelector("[data-project-count]");
+const ownerPortrait = document.querySelector("[data-owner-portrait]");
 
 let activeFilter = "all";
 
@@ -182,7 +187,12 @@ const renderBrand = () => {
     item.textContent = brandConfig.name;
   });
 
-  projectCount.textContent = String(projects.length).padStart(2, "0");
+  if (brandConfig.ownerPortrait.image) {
+    ownerPortrait.innerHTML = `
+      <img src="${brandConfig.ownerPortrait.image}" alt="${brandConfig.ownerPortrait.alt}" />
+    `;
+  }
+
   contactActions.innerHTML = `
     <a class="primary-link" href="mailto:${brandConfig.email}">Email</a>
     <a class="ghost-link strong" href="${brandConfig.github}" target="_blank" rel="noreferrer">GitHub</a>

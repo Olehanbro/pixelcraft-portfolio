@@ -2,8 +2,8 @@ const header = document.querySelector("[data-header]");
 const menu = document.querySelector("[data-menu]");
 const menuToggle = document.querySelector("[data-menu-toggle]");
 const revealItems = [...document.querySelectorAll(".reveal-up, .reveal-zoom")];
-const counters = [...document.querySelectorAll("[data-count]")];
-const tiltItems = [...document.querySelectorAll("[data-tilt]")];
+const filterButtons = [...document.querySelectorAll("[data-filter]")];
+const projectCards = [...document.querySelectorAll(".project-card")];
 
 const closeMenu = () => {
   document.body.classList.remove("menu-open");
@@ -39,45 +39,18 @@ const revealObserver = new IntersectionObserver(
 );
 
 revealItems.forEach((item, index) => {
-  item.style.transitionDelay = `${Math.min(index % 6, 5) * 72}ms`;
+  item.style.transitionDelay = `${Math.min(index % 6, 5) * 62}ms`;
   revealObserver.observe(item);
 });
 
-const counterObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter || "all";
 
-      const element = entry.target;
-      const target = Number(element.dataset.count || "0");
-      const start = performance.now();
-      const duration = 1500;
-
-      const tick = (now) => {
-        const progress = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        element.textContent = `${Math.round(target * eased)}%`;
-        if (progress < 1) requestAnimationFrame(tick);
-      };
-
-      requestAnimationFrame(tick);
-      counterObserver.unobserve(element);
+    filterButtons.forEach((item) => item.classList.toggle("active", item === button));
+    projectCards.forEach((card) => {
+      const tags = card.dataset.tags || "";
+      card.classList.toggle("is-hidden", filter !== "all" && !tags.includes(filter));
     });
-  },
-  { threshold: 0.5 }
-);
-
-counters.forEach((counter) => counterObserver.observe(counter));
-
-tiltItems.forEach((item) => {
-  item.addEventListener("pointermove", (event) => {
-    const rect = item.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width - 0.5;
-    const y = (event.clientY - rect.top) / rect.height - 0.5;
-    item.style.transform = `perspective(1200px) rotateX(${y * -2.5}deg) rotateY(${x * 3.2}deg)`;
-  });
-
-  item.addEventListener("pointerleave", () => {
-    item.style.transform = "";
   });
 });

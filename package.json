@@ -1,8 +1,8 @@
 {
-  "name": "vireon",
+  "name": "oleksandr-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Vireon advanced science and AI consulting website by Olexandr.",
+  "description": "Portfolio hub collecting previous websites by Oleksandr.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",

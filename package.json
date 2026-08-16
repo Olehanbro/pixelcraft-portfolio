@@ -1,8 +1,8 @@
 {
-  "name": "oleksandr-portfolio",
+  "name": "pixelcraft-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Portfolio hub collecting previous websites by Oleksandr.",
+  "description": "Light portfolio hub for PixelCraft web development projects.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",

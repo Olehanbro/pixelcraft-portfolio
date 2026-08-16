@@ -11,6 +11,16 @@ const brandConfig = {
 
 const projects = [
   {
+    title: "Kursor Strategy",
+    category: "Strategic consulting",
+    tags: ["strategy", "brand", "live"],
+    technologies: ["HTML", "CSS", "JavaScript", "Vercel"],
+    description:
+      "Оригінальний корпоративний лендинг для студії стратегічного консалтингу: синій акцент, сильний hero, послуги, процес, кейси та відгуки.",
+    url: "https://kursor-strategy.vercel.app/",
+    screenshots: ["assets/portfolio/kursor-strategy-og.png", "assets/portfolio/kursor-strategy-home.png"]
+  },
+  {
     title: "Vireon",
     category: "AI consulting",
     tags: ["ai", "strategy", "live"],
@@ -111,7 +121,8 @@ const createPreviewImage = (src, title, index) => `
 
 const renderProjectCard = (project, index) => {
   const previewImages = project.screenshots.map((src, imageIndex) => createPreviewImage(src, project.title, imageIndex));
-  const tagList = project.tags.map((tag) => `<span>${tag}</span>`).join("");
+  const visibleBadges = project.technologies || project.tags;
+  const tagList = visibleBadges.map((tag) => `<span>${tag}</span>`).join("");
 
   return `
     <article class="project-card reveal-up ${index === 0 ? "featured" : ""}" data-tags="${project.tags.join(" ")}">

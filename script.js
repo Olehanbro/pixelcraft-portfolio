@@ -76,7 +76,7 @@ const projects = [
     title: "Aureon",
     category: "Будівельний сервіс",
     fields: ["css"],
-    favorite: false,
+    favorite: true,
     technologies: ["Landing", "Brand", "Responsive"],
     description:
       "Сайт для construction та industrial delivery з упевненим позиціонуванням, чіткою подачею і преміальним візуальним ритмом.",
@@ -90,7 +90,7 @@ const projects = [
     title: "Auralis",
     category: "Бренд-системи",
     fields: ["consulting", "css"],
-    favorite: false,
+    favorite: true,
     technologies: ["Brand", "Landing", "Responsive"],
     description:
       "Спокійна digital brand system із модульним повідомленням, адаптивними секціями та polished consultancy-style презентацією.",
@@ -104,7 +104,7 @@ const projects = [
     title: "Mentora",
     category: "Growth-платформа",
     fields: ["it-saas"],
-    favorite: false,
+    favorite: true,
     technologies: ["Landing", "Growth", "Responsive"],
     description:
       "Growth-focused landing page із ясним повідомленням, впевненими секціями та approachable conversion flow.",
@@ -184,7 +184,13 @@ const renderHero = () => `
 `;
 
 const renderProjectCard = (project, { featured = false, index = 0 } = {}) => `
-  <article class="project-card reveal-up ${featured ? "featured" : ""}">
+  <article
+    class="project-card reveal-up ${featured ? "featured" : ""}"
+    data-card-link="${projectUrl(project)}"
+    role="link"
+    tabindex="0"
+    aria-label="Відкрити кейс ${project.title}"
+  >
     <div class="project-gallery">
       <a class="project-main-image" href="${projectUrl(project)}" data-link aria-label="Відкрити кейс ${project.title}">
         ${createPreviewImage(project.screenshots[0], project.title, index)}
@@ -211,14 +217,14 @@ const renderProjectCard = (project, { featured = false, index = 0 } = {}) => `
 `;
 
 const renderHome = () => {
-  const favorites = projects.filter((project) => project.favorite).slice(0, 4);
+  const favorites = projects.filter((project) => project.favorite).slice(0, 7);
 
   app.innerHTML = `
     ${renderHero()}
     <section class="section-block favorites" aria-labelledby="favorites-title">
       <div class="section-heading reveal-up">
         <p class="eyebrow">Улюблені роботи</p>
-        <h2 id="favorites-title">Чотири сайти, що найкраще показують діапазон портфоліо.</h2>
+        <h2 id="favorites-title">Добірка сайтів, що найкраще показують діапазон портфоліо.</h2>
         <a class="text-link" href="/projects" data-link>Усі проєкти</a>
       </div>
       <div class="favorite-grid">
@@ -254,7 +260,7 @@ const renderCatalog = () => {
       </div>
       ${
         visibleProjects.length
-          ? `<div class="project-grid">${visibleProjects.map((project, index) => renderProjectCard(project, { featured: index === 0, index })).join("")}</div>`
+          ? `<div class="project-grid">${visibleProjects.map((project, index) => renderProjectCard(project, { index })).join("")}</div>`
           : `<div class="empty-state"><h2>У цій сфері поки немає роботи.</h2><p>Коли з'явиться релевантний кейс, він буде доданий у цей каталог через дані проєкту.</p></div>`
       }
     </section>
@@ -439,6 +445,19 @@ document.addEventListener("click", (event) => {
   activeField = button.dataset.field || "all";
   renderCatalog();
   observeRevealItems();
+});
+
+document.addEventListener("click", (event) => {
+  const card = event.target.closest("[data-card-link]");
+  if (!card || event.target.closest("a, button")) return;
+  navigate(card.dataset.cardLink);
+});
+
+document.addEventListener("keydown", (event) => {
+  const card = event.target.closest("[data-card-link]");
+  if (!card || !["Enter", " "].includes(event.key)) return;
+  event.preventDefault();
+  navigate(card.dataset.cardLink);
 });
 
 const closeMenu = () => {

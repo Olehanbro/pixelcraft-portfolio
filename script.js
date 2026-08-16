@@ -212,7 +212,6 @@ const renderProjectCard = (project, { featured = false, index = 0 } = {}) => `
 
 const renderHome = () => {
   const favorites = projects.filter((project) => project.favorite).slice(0, 4);
-  const activeFields = fieldFilters.filter((field) => field.value !== "all");
 
   app.innerHTML = `
     ${renderHero()}
@@ -224,34 +223,6 @@ const renderHome = () => {
       </div>
       <div class="favorite-grid">
         ${favorites.map((project, index) => renderProjectCard(project, { featured: index === 0, index })).join("")}
-      </div>
-    </section>
-    <section class="section-block fields" id="fields" aria-labelledby="fields-title">
-      <div class="section-heading reveal-up">
-        <p class="eyebrow">За сферами</p>
-        <h2 id="fields-title">Категорії показують наявні роботи й майбутні напрями без вигаданих кейсів.</h2>
-      </div>
-      <div class="field-grid">
-        ${activeFields
-          .map((field, index) => {
-            const count = fieldCount(field.value);
-            const topProjects = projects.filter((project) => project.fields.includes(field.value)).slice(0, 3);
-            return `
-              <article class="field-card reveal-up ${count === 0 ? "is-empty" : ""}">
-                <div>
-                  <span>N° ${String(index + 1).padStart(2, "0")} · ${count} ${count === 1 ? "робота" : "робіт"}</span>
-                  <h3>${field.label}</h3>
-                  <p>${fieldCopy[field.value]}</p>
-                </div>
-                ${
-                  count
-                    ? `<ul>${topProjects.map((project) => `<li><a href="${projectUrl(project)}" data-link>${project.title}</a></li>`).join("")}</ul>`
-                    : `<p class="empty-note">Поки немає релевантного проєкту.</p>`
-                }
-              </article>
-            `;
-          })
-          .join("")}
       </div>
     </section>
   `;
@@ -353,7 +324,6 @@ const renderCase = (slug) => {
 
 const renderFooter = () => {
   footer.innerHTML = `
-    <div class="footer-word" aria-hidden="true">MYSHCHYSHYN</div>
     <div class="footer-inner">
       <div class="footer-brand">
         <a class="brand footer-logo" href="/" data-link data-brand-name>${brandConfig.name}</a>
@@ -367,14 +337,14 @@ const renderFooter = () => {
       <nav class="footer-nav" aria-label="Footer navigation">
         <a href="/" data-link>Головна</a>
         <a href="/projects" data-link>Усі проєкти</a>
-        <a href="/#fields" data-link>Сфери</a>
       </nav>
       <div class="footer-links" aria-label="Contact links">
         <a href="mailto:${brandConfig.email}">Email</a>
         <a href="${brandConfig.github}" target="_blank" rel="noreferrer">GitHub</a>
       </div>
-      <p class="footer-copy">© 2026 ${brandConfig.name}. Selected websites and live project links.</p>
+      <p class="footer-copy">© 2026. Selected websites and live project links.</p>
     </div>
+    <div class="footer-word" aria-hidden="true">MYSHCHYSHYN</div>
   `;
 };
 

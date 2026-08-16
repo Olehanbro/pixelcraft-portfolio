@@ -866,17 +866,17 @@ h1 {
 }
 
 .footer-word {
-  position: absolute;
-  left: 50%;
-  bottom: -0.22em;
-  z-index: 0;
-  transform: translateX(-50%);
+  position: relative;
+  z-index: 1;
+  width: var(--container);
+  margin: -6px auto 18px;
   color: rgba(255, 248, 236, 0.055);
   font-family: var(--font-display);
-  font-size: clamp(68px, 16vw, 252px);
+  font-size: clamp(36px, 10.5vw, 152px);
   font-weight: 700;
-  line-height: 0.8;
+  line-height: 0.82;
   letter-spacing: 0;
+  text-align: center;
   white-space: nowrap;
   pointer-events: none;
 }
@@ -901,7 +901,8 @@ h1 {
   font-size: 14px;
 }
 
-.footer-logo {
+.site-footer .footer-logo {
+  display: none;
   width: max-content;
 }
 
@@ -1114,6 +1115,11 @@ h1 {
   .footer-inner {
     grid-template-columns: 1fr;
     padding-block: 34px;
+  }
+
+  .footer-word {
+    font-size: clamp(30px, 12vw, 48px);
+    margin-bottom: 14px;
   }
 }
 

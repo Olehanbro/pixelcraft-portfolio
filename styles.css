@@ -258,12 +258,42 @@ body.menu-open .menu-button span:last-child {
   inset: 0;
 }
 
-.hero-background img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(0.72) contrast(0.72) blur(2px);
-  opacity: 0.44;
+.hero-background {
+  background:
+    radial-gradient(circle at 18% 24%, rgba(244, 200, 106, 0.2), transparent 24%),
+    radial-gradient(circle at 72% 18%, rgba(122, 60, 255, 0.24), transparent 26%),
+    radial-gradient(circle at 58% 74%, rgba(255, 248, 236, 0.08), transparent 30%),
+    linear-gradient(135deg, rgba(50, 16, 72, 0.92), rgba(16, 5, 22, 0.94) 52%, rgba(46, 16, 50, 0.9));
+}
+
+.hero-background::before,
+.hero-background::after {
+  content: "";
+  position: absolute;
+  inset: clamp(24px, 4vw, 76px);
+  border: 1px solid rgba(244, 200, 106, 0.13);
+  border-radius: 42px;
+  pointer-events: none;
+}
+
+.hero-background::before {
+  background:
+    linear-gradient(90deg, rgba(255, 248, 236, 0.045) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 248, 236, 0.035) 1px, transparent 1px);
+  background-size: 74px 74px;
+  mask-image: radial-gradient(circle at 52% 46%, black, transparent 72%);
+}
+
+.hero-background::after {
+  inset: auto clamp(26px, 5vw, 96px) clamp(28px, 5vw, 92px) auto;
+  width: min(42vw, 640px);
+  aspect-ratio: 1.34;
+  border-color: rgba(244, 200, 106, 0.24);
+  background:
+    radial-gradient(circle at 26% 42%, rgba(244, 200, 106, 0.22), transparent 18%),
+    radial-gradient(circle at 74% 34%, rgba(122, 60, 255, 0.28), transparent 24%),
+    linear-gradient(145deg, rgba(255, 248, 236, 0.08), rgba(255, 248, 236, 0.02));
+  box-shadow: 0 34px 120px rgba(5, 1, 11, 0.38);
 }
 
 .hero-overlay {
@@ -780,7 +810,7 @@ body.menu-open .menu-button span:last-child {
 
 .principle-card p,
 .process-row p,
-.team-card p,
+.team-role p,
 .contact-copy p,
 .channel-card p,
 .brief-list p,
@@ -889,24 +919,92 @@ body.menu-open .menu-button span:last-child {
   display: grid;
 }
 
-.team-grid {
+.team-layout {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(18px, 2vw, 34px);
-  min-width: 0;
+  grid-template-columns: minmax(420px, 0.82fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 76px);
+  align-items: start;
 }
 
-.team-card {
-  min-width: 0;
-  min-height: 620px;
+.team-photo-panel {
+  position: sticky;
+  top: 118px;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 24px;
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: auto 1fr;
   background:
-    linear-gradient(145deg, rgba(255, 248, 236, 0.075), rgba(255, 248, 236, 0.03)),
+    radial-gradient(circle at 18% 18%, rgba(244, 200, 106, 0.14), transparent 28%),
+    linear-gradient(145deg, rgba(255, 248, 236, 0.06), rgba(255, 248, 236, 0.025)),
     rgba(255, 248, 236, 0.035);
+  padding: clamp(14px, 2vw, 24px);
+  box-shadow: var(--shadow);
+}
+
+.team-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(12px, 1.4vw, 18px);
+}
+
+.team-photo-slot {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 248, 236, 0.035);
+}
+
+.team-photo-slot > span {
+  display: block;
+  min-height: 52px;
+  border-top: 1px solid var(--line);
+  color: rgba(244, 200, 106, 0.78);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  padding: 16px;
+  text-transform: uppercase;
+}
+
+.team-photo-slot .owner-placeholder {
+  inset: 10px;
+}
+
+.team-photo-slot .owner-placeholder span {
+  font-size: clamp(24px, 2.2vw, 34px);
+}
+
+.team-photo-slot .owner-placeholder small {
+  font-size: 10px;
+}
+
+.team-role-list {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    linear-gradient(145deg, rgba(255, 248, 236, 0.055), rgba(255, 248, 236, 0.025)),
+    rgba(255, 248, 236, 0.035);
+}
+
+.team-role {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 170px minmax(220px, 0.72fr) minmax(260px, 1fr);
+  gap: clamp(18px, 3vw, 56px);
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+  padding: clamp(28px, 4vw, 56px);
+}
+
+.team-role:last-child {
+  border-bottom: 0;
+}
+
+.team-role p {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .team-portrait {
@@ -981,21 +1079,11 @@ body.menu-open .menu-button span:last-child {
 
 .team-owner {
   border: 0;
-  border-bottom: 1px solid var(--line);
   border-radius: 0;
   aspect-ratio: 0.82;
 }
 
-.team-card-copy {
-  width: 100%;
-  min-width: 0;
-  display: grid;
-  align-content: space-between;
-  gap: 24px;
-  padding: clamp(24px, 3vw, 38px);
-}
-
-.team-card-copy span,
+.team-role span,
 .journal-card-top span,
 .journal-card-top em,
 .brief-list span {
@@ -1007,12 +1095,12 @@ body.menu-open .menu-button span:last-child {
   text-transform: uppercase;
 }
 
-.team-card-copy h3 {
+.team-role h3 {
   margin: 0;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(30px, 3vw, 52px);
-  line-height: 1.04;
+  font-size: clamp(32px, 3.4vw, 62px);
+  line-height: 1;
 }
 
 .process-row {
@@ -1519,12 +1607,14 @@ body.menu-open .menu-button span:last-child {
   .case-hero,
   .case-details,
   .contact-fold,
+  .team-layout,
   .hero-layout {
     grid-template-columns: 1fr;
   }
 
-  .team-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .team-photo-panel {
+    position: relative;
+    top: auto;
   }
 
   .field-feature {
@@ -1691,15 +1781,17 @@ body.menu-open .menu-button span:last-child {
     text-align: left;
   }
 
-  .team-grid {
+  .team-photo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .team-role {
     grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 24px;
   }
 
-  .team-card {
-    min-height: auto;
-  }
-
-  .team-card-copy h3,
+  .team-role h3,
   .journal-card h3,
   .channel-card strong {
     font-size: clamp(30px, 9.5vw, 46px);

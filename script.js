@@ -311,9 +311,7 @@ const renderTeamPortrait = (role) => {
 
 const renderHero = () => `
   <section class="hero hero-stage" aria-labelledby="hero-title">
-    <div class="hero-background" aria-hidden="true">
-      <img src="/assets/portfolio/kursor-strategy-og.png" alt="" />
-    </div>
+    <div class="hero-background" aria-hidden="true"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content hero-layout reveal-up">
       <div class="hero-copy">
@@ -504,21 +502,34 @@ const renderAbout = () => `
       <h2 id="team-title">Ролі команди в одному робочому ритмі.</h2>
       <span class="section-note">Портрети — нейтральні слоти. Фото власника міняється через /assets/owner-portrait.jpg.</span>
     </div>
-    <div class="team-grid">
+    <div class="team-layout">
+      <aside class="team-photo-panel reveal-up" aria-label="Місця для майбутніх фото команди">
+        <div class="team-photo-grid">
+          ${teamRoles
+            .map(
+              (role, index) => `
+                <article class="team-photo-slot ${role.type}">
+                  ${renderTeamPortrait(role)}
+                  <span>${numbered(index)} · ${role.label}</span>
+                </article>
+              `
+            )
+            .join("")}
+        </div>
+      </aside>
+      <div class="team-role-list">
         ${teamRoles
           .map(
             (role, index) => `
-              <article class="team-card reveal-up">
-                ${renderTeamPortrait(role)}
-                <div class="team-card-copy">
-                  <span>${numbered(index)} · ${role.label}</span>
+              <article class="team-role reveal-up">
+                <span>${numbered(index)} · ${role.label}</span>
                 <h3>${role.title}</h3>
                 <p>${role.text}</p>
-                </div>
               </article>
             `
           )
           .join("")}
+      </div>
     </div>
   </section>
   <section class="section-block process-section" aria-labelledby="process-title">

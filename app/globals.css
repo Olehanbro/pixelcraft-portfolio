@@ -1424,6 +1424,7 @@ body.menu-open .menu-button span:last-child {
 }
 
 .case-visual {
+  position: relative;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -1504,6 +1505,15 @@ body.menu-open .menu-button span:last-child {
 }
 
 .case-preview-grid img {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 248, 236, 0.06);
+  aspect-ratio: 1.75;
+}
+
+.case-preview-image {
+  position: relative;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: rgba(255, 248, 236, 0.06);

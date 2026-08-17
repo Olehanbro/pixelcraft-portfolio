@@ -4,11 +4,13 @@
   "private": true,
   "description": "Light portfolio hub for Myshchyshyn web development projects.",
   "scripts": {
-    "dev": "vite --host 127.0.0.1",
-    "build": "vite build",
-    "preview": "vite preview --host 127.0.0.1"
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1"
   },
-  "devDependencies": {
-    "vite": "^7.0.0"
+  "dependencies": {
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }

@@ -1,7 +1,11 @@
 node_modules/
 dist/
+.next/
+.qa-screenshots/
 .vercel/
 .vercel-*/
 .DS_Store
 .vercel
 .env*
+AGENTS.md
+CLAUDE.md

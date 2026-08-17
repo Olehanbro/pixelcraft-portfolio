@@ -186,18 +186,26 @@ const processSteps = [
 const teamRoles = [
   {
     title: "Власник / розробка",
-    text: "Архітектура сторінок, фронтенд, адаптивність і запуск на production."
+    label: "Слот власника",
+    type: "owner",
+    text: "Архітектура сторінок, фронтенд, адаптивність і запуск на production. Фото замінюється в brandConfig.ownerPortrait.image."
   },
   {
     title: "Дизайн-напрям",
+    label: "Дівчина 01",
+    type: "woman-a",
     text: "Типографіка, композиція, ритм секцій і візуальна логіка портфоліо."
   },
   {
     title: "Контент",
+    label: "Дівчина 02",
+    type: "woman-b",
     text: "Тексти без канцеляриту: коротко, по суті, під конкретний кейс."
   },
   {
     title: "Перевірка",
+    label: "Хлопець 01",
+    type: "man",
     text: "Скріншоти, mobile, wide desktop, клікабельність карток і чистий deploy."
   }
 ];
@@ -242,12 +250,14 @@ const journalPosts = [
 
 const contactChannels = [
   {
+    type: "email-channel",
     eyebrow: "— Пошта",
     title: brandConfig.email,
     text: "Найпряміший канал для задачі, референсів і короткого опису проєкту.",
     href: `mailto:${brandConfig.email}`
   },
   {
+    type: "github-channel",
     eyebrow: "— GitHub",
     title: "Olehanbro",
     text: "Код, репозиторії й технічний контекст по вже зібраних роботах.",
@@ -276,20 +286,49 @@ const createPreviewImage = (src, title, index) => `
   <img src="${src}" alt="${title} preview ${index + 1}" loading="${index === 0 ? "eager" : "lazy"}" />
 `;
 
+const renderOwnerPortrait = (modifier = "") => `
+  <div class="owner-portrait ${modifier}">
+    ${
+      brandConfig.ownerPortrait.image
+        ? `<img src="${brandConfig.ownerPortrait.image}" alt="${brandConfig.ownerPortrait.alt}" />`
+        : `<div class="owner-placeholder">
+            <span>Фото власника</span>
+            <small>/assets/owner-portrait.jpg</small>
+          </div>`
+    }
+  </div>
+`;
+
+const renderTeamPortrait = (role) => {
+  if (role.type === "owner") return renderOwnerPortrait("team-owner");
+
+  return `
+    <div class="team-portrait ${role.type}" aria-hidden="true">
+      <span></span>
+    </div>
+  `;
+};
+
 const renderHero = () => `
   <section class="hero hero-stage" aria-labelledby="hero-title">
     <div class="hero-background" aria-hidden="true">
-      <img src="/assets/portfolio/vireon-hero.png" alt="" />
+      <img src="/assets/portfolio/kursor-strategy-og.png" alt="" />
     </div>
     <div class="hero-overlay"></div>
-    <div class="hero-content reveal-up">
-      <p class="hero-kicker">— Портфоліо веброзробника · 2026</p>
-      <h1 id="hero-title">Сайти, які можна <span>відкрити наживо.</span></h1>
-      <p>
-        Портфоліо веброзробника: реальні сторінки, великі прев'ю,
-        короткі кейси й прямі посилання на production.
-      </p>
-      <a class="primary-link hero-cta" href="/projects" data-link>Подивитись роботи</a>
+    <div class="hero-content hero-layout reveal-up">
+      <div class="hero-copy">
+        <p class="hero-kicker">— Портфоліо веброзробника · 2026</p>
+        <h1 id="hero-title">Сайти, які працюють <span>наживо.</span></h1>
+        <p>
+          Добірка production-сторінок, де перший екран, текст і адаптивність
+          працюють разом.
+        </p>
+        <a class="primary-link hero-cta" href="/projects" data-link>Подивитись роботи</a>
+      </div>
+      <aside class="hero-owner-card" aria-label="Місце для майбутнього фото власника">
+        ${renderOwnerPortrait("hero-owner")}
+        <p>Слот для майбутнього портрета</p>
+      </aside>
     </div>
   </section>
 `;
@@ -449,39 +488,37 @@ const renderCatalog = () => {
 const renderAbout = () => `
   <section class="page-hero about-hero" aria-labelledby="about-title">
     <p class="hero-kicker">— Про нас · PixelCraft</p>
-    <h1 id="about-title">Невелика команда, яка збирає сайти до живого стану.</h1>
-    <p>Ми не продаємо “ще один красивий екран”. Ми робимо структуру, верстку, тексти й production-запуск так, щоб роботу можна було показати без пояснень.</p>
+    <h1 id="about-title">Команда під сайти, які треба показувати без пояснень.</h1>
+    <p>PixelCraft збирає портфоліо, лендинги й кейси з нормальної структури: зрозумілий перший екран, охайна верстка, живий deployment.</p>
   </section>
   <section class="manifest-section compact" aria-label="Маніфест PixelCraft">
     <blockquote class="reveal-up">
-      «Кейс має відкриватися не як картинка, а як живий сайт: зі зрозумілим першим екраном,
-      акуратною адаптивністю і нормальним шляхом до контакту».
+      «Сайт має не пояснювати, що він гарний. Він має швидко показати роботу,
+      довести рівень і дати зрозумілий наступний крок».
     </blockquote>
     <p>— нотатка PixelCraft · 2026</p>
   </section>
   ${renderPrinciples("Три принципи, яких ми дотримуємось.")}
   <section class="section-block team-section" aria-labelledby="team-title">
     <div class="section-heading split reveal-up">
-      <h2 id="team-title">Команда — ролі, які тримають сайт у формі.</h2>
-      <span class="section-note">Тимчасовий командний візуал, який легко замінити реальними фото.</span>
+      <h2 id="team-title">Ролі команди в одному робочому ритмі.</h2>
+      <span class="section-note">Портрети — нейтральні слоти. Фото власника міняється через /assets/owner-portrait.jpg.</span>
     </div>
-    <div class="team-layout">
-      <figure class="team-collage reveal-up">
-        <img src="/assets/team/pixelcraft-team-collage.png" alt="Згенерований командний візуал PixelCraft" />
-      </figure>
-      <div class="team-role-list">
+    <div class="team-grid">
         ${teamRoles
           .map(
             (role, index) => `
-              <article class="team-role reveal-up">
-                <span>${numbered(index)}</span>
+              <article class="team-card reveal-up">
+                ${renderTeamPortrait(role)}
+                <div class="team-card-copy">
+                  <span>${numbered(index)} · ${role.label}</span>
                 <h3>${role.title}</h3>
                 <p>${role.text}</p>
+                </div>
               </article>
             `
           )
           .join("")}
-      </div>
     </div>
   </section>
   <section class="section-block process-section" aria-labelledby="process-title">
@@ -541,22 +578,17 @@ const renderJournal = () => `
 `;
 
 const renderContacts = () => `
-  <section class="page-hero contact-hero" aria-labelledby="contact-title">
-    <p class="hero-kicker">Зв'язатися · відповідаємо напряму</p>
-    <h1 id="contact-title">Розкажи, який сайт треба зібрати.</h1>
-    <p>Надішли короткий опис, референси й бажаний результат. Достатньо нормального повідомлення без довгої анкети.</p>
-  </section>
-  <section class="section-block contact-section" aria-labelledby="channels-title">
-    <div class="contact-layout">
+  <section class="section-block contact-section contact-first-screen" aria-labelledby="channels-title">
+    <div class="contact-fold">
       <div class="contact-copy reveal-up">
+        <p class="hero-kicker">Контакти · прямий старт</p>
         <h2 id="channels-title">Прямі канали</h2>
-        <p>Email — для задачі й референсів. GitHub — для технічного контексту та вже зібраних робіт.</p>
-      </div>
-      <div class="channel-list reveal-up">
+        <p>Найшвидше почати з короткого email: задача, 2-3 референси й сторінки, які точно потрібні на першому запуску.</p>
+        <div class="channel-list">
         ${contactChannels
           .map(
             (channel) => `
-              <a class="channel-card" href="${channel.href}" ${channel.href.startsWith("http") ? 'target="_blank" rel="noreferrer"' : ""}>
+              <a class="channel-card ${channel.type}" href="${channel.href}" ${channel.href.startsWith("http") ? 'target="_blank" rel="noreferrer"' : ""}>
                 <span>${channel.eyebrow}</span>
                 <strong>${channel.title}</strong>
                 <p>${channel.text}</p>
@@ -564,18 +596,44 @@ const renderContacts = () => `
             `
           )
           .join("")}
+        </div>
       </div>
+      <form class="brief-panel brief-form reveal-up" action="mailto:${brandConfig.email}" method="post" enctype="text/plain">
+        <h3>Бриф на старт</h3>
+        <label>
+          <span>Як вас звати *</span>
+          <input name="name" type="text" placeholder="Ім'я або компанія" />
+        </label>
+        <label>
+          <span>Канал для зв'язку *</span>
+          <input name="contact" type="text" placeholder="email або посилання" />
+        </label>
+        <label>
+          <span>Тип сайту</span>
+          <select name="project_type">
+            <option>— Оберіть формат</option>
+            <option>Портфоліо</option>
+            <option>Лендинг</option>
+            <option>Каталог / e-commerce</option>
+            <option>Сайт-кейс</option>
+          </select>
+        </label>
+        <label>
+          <span>Що потрібно зробити *</span>
+          <textarea name="message" placeholder="Наприклад: потрібен сайт-портфоліо з 5 кейсами, сторінкою контактів і адаптацією під mobile."></textarea>
+        </label>
+        <div class="budget-group" aria-label="Орієнтовний бюджет">
+          <span>Орієнтовний бюджет</span>
+          <div>
+            <button type="button">до $500</button>
+            <button type="button">$500-1000</button>
+            <button type="button">$1000-5000</button>
+            <button type="button">$5000+</button>
+          </div>
+        </div>
+        <button class="primary-link brief-submit" type="submit">Надіслати email</button>
+      </form>
     </div>
-    <aside class="brief-panel reveal-up" aria-label="Що написати в першому повідомленні">
-      <h3>Що написати в першому повідомленні</h3>
-      <div class="brief-list">
-        <p><span>01.</span> Що це за сайт: портфоліо, лендинг, e-commerce, сервіс або кейс.</p>
-        <p><span>02.</span> Посилання на референси й 2-3 речі, які подобаються.</p>
-        <p><span>03.</span> Які сторінки точно потрібні на першому запуску.</p>
-        <p><span>04.</span> Дедлайн або приблизний темп роботи.</p>
-      </div>
-      <a class="primary-link" href="mailto:${brandConfig.email}">Написати email</a>
-    </aside>
   </section>
 `;
 

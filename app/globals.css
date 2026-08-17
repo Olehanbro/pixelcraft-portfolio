@@ -21,6 +21,13 @@
   --narrow: min(1280px, calc(100vw - 44px));
   --font-main: Inter, Arial, sans-serif;
   --font-display: "Cormorant Garamond", Georgia, serif;
+  --type-hero: clamp(46px, 5.75vw, 104px);
+  --type-section: clamp(36px, 3.8vw, 68px);
+  --type-feature: clamp(36px, 4vw, 72px);
+  --type-card: clamp(30px, 2.5vw, 46px);
+  --type-row: clamp(28px, 2.45vw, 42px);
+  --type-body-large: clamp(16px, 1.18vw, 20px);
+  --type-footer-link: clamp(24px, 2.15vw, 38px);
 }
 
 * {
@@ -342,9 +349,9 @@ body.menu-open .menu-button span:last-child {
   margin: 0 auto;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(58px, 7.2vw, 128px);
+  font-size: var(--type-hero);
   font-weight: 700;
-  line-height: 0.96;
+  line-height: 1;
   letter-spacing: 0;
 }
 
@@ -361,9 +368,9 @@ body.menu-open .menu-button span:last-child {
 .hero-content p:not(.hero-kicker),
 .page-hero > p:not(.hero-kicker) {
   max-width: 780px;
-  margin: 34px auto 0;
+  margin: 28px auto 0;
   color: var(--ink-soft);
-  font-size: clamp(18px, 1.6vw, 24px);
+  font-size: var(--type-body-large);
 }
 
 .hero-layout p:not(.hero-kicker) {
@@ -435,7 +442,7 @@ body.menu-open .menu-button span:last-child {
 
 .owner-placeholder span {
   font-family: var(--font-display);
-  font-size: clamp(32px, 3vw, 52px);
+  font-size: clamp(28px, 2.5vw, 44px);
   line-height: 0.95;
 }
 
@@ -473,9 +480,9 @@ body.menu-open .menu-button span:last-child {
   margin: 0;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(42px, 5vw, 90px);
+  font-size: var(--type-section);
   font-weight: 700;
-  line-height: 1.02;
+  line-height: 1.06;
 }
 
 .favorites {
@@ -584,15 +591,15 @@ body.menu-open .menu-button span:last-child {
   margin: 0 0 18px;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(40px, 3.6vw, 68px);
+  font-size: var(--type-card);
   font-weight: 700;
-  line-height: 0.96;
+  line-height: 1.04;
 }
 
 .project-info p {
   margin: 0;
   color: var(--ink-soft);
-  font-size: clamp(17px, 1.25vw, 22px);
+  font-size: var(--type-body-large);
 }
 
 .project-meta {
@@ -672,14 +679,14 @@ body.menu-open .menu-button span:last-child {
   margin: 0 0 26px;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(42px, 4.8vw, 84px);
-  line-height: 1.02;
+  font-size: var(--type-feature);
+  line-height: 1.06;
 }
 
 .field-feature p:not(.hero-kicker) {
   max-width: 600px;
   color: var(--ink-soft);
-  font-size: clamp(18px, 1.5vw, 24px);
+  font-size: var(--type-body-large);
 }
 
 .field-feature .primary-link {
@@ -732,7 +739,7 @@ body.menu-open .menu-button span:last-child {
 .field-row strong {
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(32px, 3.2vw, 58px);
+  font-size: var(--type-row);
   font-weight: 700;
   line-height: 1;
 }
@@ -756,9 +763,9 @@ body.menu-open .menu-button span:last-child {
   margin: 0;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(38px, 5vw, 86px);
+  font-size: clamp(34px, 4vw, 66px);
   font-weight: 600;
-  line-height: 1.06;
+  line-height: 1.12;
 }
 
 .manifest-section p {
@@ -795,7 +802,7 @@ body.menu-open .menu-button span:last-child {
   margin-bottom: 58px;
   color: rgba(244, 200, 106, 0.7);
   font-family: var(--font-display);
-  font-size: clamp(50px, 5vw, 88px);
+  font-size: clamp(40px, 3.8vw, 66px);
   font-style: italic;
 }
 
@@ -803,7 +810,7 @@ body.menu-open .menu-button span:last-child {
   margin: 0 0 28px;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(30px, 3.2vw, 50px);
+  font-size: var(--type-card);
   font-weight: 700;
   line-height: 1;
 }
@@ -818,7 +825,7 @@ body.menu-open .menu-button span:last-child {
 .featured-post p {
   margin: 0;
   color: var(--ink-soft);
-  font-size: clamp(17px, 1.35vw, 22px);
+  font-size: var(--type-body-large);
 }
 
 .section-note {
@@ -908,7 +915,7 @@ body.menu-open .menu-button span:last-child {
   margin-bottom: 16px;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(34px, 4.2vw, 66px);
+  font-size: var(--type-section);
 }
 
 .empty-state p {
@@ -971,7 +978,7 @@ body.menu-open .menu-button span:last-child {
 }
 
 .team-photo-slot .owner-placeholder span {
-  font-size: clamp(24px, 2.2vw, 34px);
+  font-size: clamp(22px, 1.9vw, 30px);
 }
 
 .team-photo-slot .owner-placeholder small {
@@ -1099,7 +1106,7 @@ body.menu-open .menu-button span:last-child {
   margin: 0;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(32px, 3.4vw, 62px);
+  font-size: var(--type-card);
   line-height: 1;
 }
 
@@ -1119,7 +1126,7 @@ body.menu-open .menu-button span:last-child {
 .process-row span {
   color: rgba(244, 200, 106, 0.72);
   font-family: var(--font-display);
-  font-size: clamp(44px, 4vw, 72px);
+  font-size: clamp(34px, 3vw, 54px);
   font-style: italic;
 }
 
@@ -1127,7 +1134,7 @@ body.menu-open .menu-button span:last-child {
   margin: 0;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(32px, 3.6vw, 58px);
+  font-size: var(--type-card);
   font-weight: 700;
   line-height: 1;
 }
@@ -1162,8 +1169,8 @@ body.menu-open .menu-button span:last-child {
   margin: 0 0 28px;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(42px, 5.2vw, 92px);
-  line-height: 1;
+  font-size: var(--type-feature);
+  line-height: 1.06;
 }
 
 .featured-post > span {
@@ -1205,8 +1212,8 @@ body.menu-open .menu-button span:last-child {
   margin: 0 0 24px;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(34px, 3.8vw, 62px);
-  line-height: 1.02;
+  font-size: var(--type-card);
+  line-height: 1.06;
 }
 
 .journal-card small {
@@ -1240,8 +1247,8 @@ body.menu-open .menu-button span:last-child {
   margin: 0 0 24px;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(40px, 4.8vw, 80px);
-  line-height: 1.02;
+  font-size: var(--type-feature);
+  line-height: 1.06;
 }
 
 .contact-copy h2 {
@@ -1280,13 +1287,13 @@ body.menu-open .menu-button span:last-child {
 .channel-card strong {
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(32px, 3.6vw, 58px);
+  font-size: var(--type-row);
   line-height: 1;
   overflow-wrap: anywhere;
 }
 
 .email-channel strong {
-  font-size: clamp(28px, 2.65vw, 52px);
+  font-size: clamp(24px, 2.1vw, 38px);
   white-space: nowrap;
 }
 
@@ -1405,15 +1412,15 @@ body.menu-open .menu-button span:last-child {
   margin: 0;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(54px, 6.5vw, 110px);
-  line-height: 0.98;
+  font-size: clamp(42px, 4.8vw, 80px);
+  line-height: 1;
 }
 
 .case-copy p:not(.hero-kicker) {
   max-width: 640px;
   margin: 30px 0 0;
   color: var(--ink-soft);
-  font-size: clamp(18px, 1.5vw, 24px);
+  font-size: var(--type-body-large);
 }
 
 .case-actions {
@@ -1451,15 +1458,15 @@ body.menu-open .menu-button span:last-child {
   margin-bottom: 24px;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(40px, 4.8vw, 78px);
-  line-height: 1.02;
+  font-size: var(--type-feature);
+  line-height: 1.06;
 }
 
 .case-text p:last-child {
   max-width: 860px;
   margin: 0;
   color: var(--ink-soft);
-  font-size: clamp(18px, 1.45vw, 24px);
+  font-size: var(--type-body-large);
 }
 
 .case-aside {
@@ -1546,7 +1553,7 @@ body.menu-open .menu-button span:last-child {
   max-width: 520px;
   margin: 46px 0 0;
   color: var(--ink-soft);
-  font-size: clamp(18px, 1.4vw, 24px);
+  font-size: var(--type-body-large);
 }
 
 .site-footer .footer-logo {
@@ -1567,8 +1574,8 @@ body.menu-open .menu-button span:last-child {
   gap: 12px;
   color: var(--paper);
   font-family: var(--font-display);
-  font-size: clamp(30px, 3.2vw, 54px);
-  line-height: 1;
+  font-size: var(--type-footer-link);
+  line-height: 1.08;
 }
 
 .footer-word {
@@ -1576,7 +1583,7 @@ body.menu-open .menu-button span:last-child {
   margin: -70px auto 14px;
   color: rgba(255, 248, 236, 0.052);
   font-family: var(--font-display);
-  font-size: clamp(54px, 9.8vw, 184px);
+  font-size: clamp(48px, 8.6vw, 160px);
   font-weight: 700;
   line-height: 0.86;
   letter-spacing: 0;
@@ -1699,7 +1706,7 @@ body.menu-open .menu-button span:last-child {
 
   .hero-content h1,
   .page-hero h1 {
-    font-size: clamp(42px, 12vw, 64px);
+    font-size: clamp(38px, 10.8vw, 56px);
   }
 
   .hero-layout {
@@ -1770,7 +1777,7 @@ body.menu-open .menu-button span:last-child {
   }
 
   .field-row strong {
-    font-size: 34px;
+    font-size: 28px;
   }
 
   .manifest-section {
@@ -1783,7 +1790,7 @@ body.menu-open .menu-button span:last-child {
   }
 
   .manifest-section blockquote {
-    font-size: clamp(32px, 9vw, 50px);
+    font-size: clamp(30px, 8vw, 44px);
   }
 
   .section-note {
@@ -1804,7 +1811,7 @@ body.menu-open .menu-button span:last-child {
   .team-role h3,
   .journal-card h3,
   .channel-card strong {
-    font-size: clamp(30px, 9.5vw, 46px);
+    font-size: clamp(28px, 8.2vw, 40px);
   }
 
   .team-portrait,
@@ -1819,7 +1826,7 @@ body.menu-open .menu-button span:last-child {
   }
 
   .featured-post h2 {
-    font-size: clamp(34px, 10vw, 54px);
+    font-size: clamp(30px, 8.6vw, 46px);
   }
 
   .journal-card {
@@ -1833,7 +1840,7 @@ body.menu-open .menu-button span:last-child {
 
   .contact-copy h2,
   .brief-panel h3 {
-    font-size: clamp(34px, 10vw, 54px);
+    font-size: clamp(30px, 8.8vw, 46px);
   }
 
   .brief-panel {
@@ -1899,7 +1906,7 @@ body.menu-open .menu-button span:last-child {
   }
 
   .case-copy h1 {
-    font-size: clamp(56px, 16vw, 86px);
+    font-size: clamp(40px, 11vw, 62px);
   }
 
   .footer-inner {
@@ -1916,7 +1923,7 @@ body.menu-open .menu-button span:last-child {
 
   .footer-nav a,
   .footer-links a {
-    font-size: 34px;
+    font-size: clamp(26px, 7.6vw, 30px);
   }
 
   .footer-word {

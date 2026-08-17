@@ -35,12 +35,14 @@
 }
 
 html {
+  background: var(--bg);
   scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+  min-height: 100svh;
   overflow-x: hidden;
   background:
     radial-gradient(circle at 16% 10%, rgba(122, 60, 255, 0.22), transparent 26%),
@@ -457,10 +459,16 @@ body.menu-open .menu-button span:last-child {
 }
 
 .section-block {
+  position: relative;
   width: var(--container);
   margin: 0 auto;
   padding: clamp(92px, 9vw, 150px) 0;
   scroll-margin-top: 112px;
+}
+
+.section-block > * {
+  position: relative;
+  z-index: 1;
 }
 
 .section-heading {
@@ -486,9 +494,20 @@ body.menu-open .menu-button span:last-child {
 }
 
 .favorites {
+  isolation: isolate;
+}
+
+.favorites::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 50%;
+  z-index: 0;
+  width: 100vw;
+  transform: translateX(-50%);
   background:
     radial-gradient(circle at 10% 0%, rgba(244, 200, 106, 0.08), transparent 30%),
     linear-gradient(120deg, rgba(58, 22, 76, 0.68), rgba(17, 6, 24, 0.1));
+  pointer-events: none;
 }
 
 .favorite-grid,

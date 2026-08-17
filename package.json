@@ -1,8 +1,8 @@
 {
-  "name": "pixelcraft-portfolio",
+  "name": "myshchyshyn-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Light portfolio hub for PixelCraft web development projects.",
+  "description": "Light portfolio hub for Myshchyshyn web development projects.",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "vite build",

@@ -1,5 +1,5 @@
 const brandConfig = {
-  name: "PixelCraft",
+  name: "Myshchyshyn",
   email: "sashamischishin2005@gmail.com",
   github: "https://github.com/Olehanbro",
   ownerPortrait: {
@@ -419,7 +419,7 @@ const renderManifest = () => `
       «Сайт має пояснювати роботу так, ніби поруч стоїть людина, яка справді розуміє бізнес:
       спокійно, точно і без зайвого театру».
     </blockquote>
-    <p>— принцип PixelCraft · 2026</p>
+    <p>— принцип Myshchyshyn · 2026</p>
   </section>
 `;
 
@@ -485,16 +485,16 @@ const renderCatalog = () => {
 
 const renderAbout = () => `
   <section class="page-hero about-hero" aria-labelledby="about-title">
-    <p class="hero-kicker">— Про нас · PixelCraft</p>
+    <p class="hero-kicker">— Про нас · Myshchyshyn</p>
     <h1 id="about-title">Команда під сайти, які треба показувати без пояснень.</h1>
-    <p>PixelCraft збирає портфоліо, лендинги й кейси з нормальної структури: зрозумілий перший екран, охайна верстка, живий deployment.</p>
+    <p>Myshchyshyn збирає портфоліо, лендинги й кейси з нормальної структури: зрозумілий перший екран, охайна верстка, живий deployment.</p>
   </section>
-  <section class="manifest-section compact" aria-label="Маніфест PixelCraft">
+  <section class="manifest-section compact" aria-label="Маніфест Myshchyshyn">
     <blockquote class="reveal-up">
       «Сайт має не пояснювати, що він гарний. Він має швидко показати роботу,
       довести рівень і дати зрозумілий наступний крок».
     </blockquote>
-    <p>— нотатка PixelCraft · 2026</p>
+    <p>— нотатка Myshchyshyn · 2026</p>
   </section>
   ${renderPrinciples("Три принципи, яких ми дотримуємось.")}
   <section class="section-block team-section" aria-labelledby="team-title">

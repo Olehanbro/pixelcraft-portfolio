@@ -24,17 +24,22 @@ export function HomeHero() {
       <div className="hero-background" aria-hidden="true" />
       <div className="hero-overlay" />
       <div className="hero-content hero-layout reveal-up">
+        <span className="hero-monogram" aria-hidden="true">
+          M
+        </span>
         <div className="hero-copy">
-          <p className="hero-kicker">— Портфоліо веброзробника · 2026</p>
           <h1 id="hero-title">
-            Сайти, які працюють <span>наживо.</span>
+            Сайти, що <span>працюють</span>
           </h1>
-          <p>Добірка production-сторінок, де перший екран, текст і адаптивність працюють разом.</p>
-          <Link className="primary-link hero-cta" href="/projects">
-            Подивитись роботи
+          <p>Створюю сучасні, швидкі та зручні сайти, які приносять результат.</p>
+          <Link className="primary-link hero-cta" href="/contacts">
+            Обговорити проєкт
           </Link>
         </div>
-        <aside className="hero-owner-card" aria-label="Місце для майбутнього фото власника">
+        <aside
+          className="hero-owner-card hero-portrait-stage"
+          aria-label="Місце для майбутнього фото власника"
+        >
           <div className="hero-preview-cloud" aria-label="Швидкі прев'ю проєктів">
             {heroPreviewProjects.map((project, index) => (
               <Link
@@ -56,7 +61,6 @@ export function HomeHero() {
             ))}
           </div>
           <OwnerPortrait modifier="hero-owner" />
-          <p>Слот для майбутнього портрета</p>
         </aside>
       </div>
     </section>

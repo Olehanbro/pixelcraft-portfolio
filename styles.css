@@ -284,7 +284,8 @@ body.menu-open .menu-button span:last-child {
 .hero-kicker,
 .eyebrow,
 .footer-nav span,
-.footer-links span {
+.footer-links span,
+.section-note {
   margin: 0 0 22px;
   color: var(--muted);
   font-size: 13px;
@@ -623,6 +624,12 @@ body.menu-open .menu-button span:last-child {
   text-align: center;
 }
 
+.manifest-section.compact {
+  min-height: 68svh;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
 .manifest-section blockquote {
   max-width: 1420px;
   margin: 0;
@@ -681,10 +688,22 @@ body.menu-open .menu-button span:last-child {
 }
 
 .principle-card p,
-.process-row p {
+.process-row p,
+.team-role p,
+.contact-copy p,
+.channel-card p,
+.brief-list p,
+.journal-card p,
+.featured-post p {
   margin: 0;
   color: var(--ink-soft);
   font-size: clamp(17px, 1.35vw, 22px);
+}
+
+.section-note {
+  max-width: 460px;
+  margin-top: 16px;
+  text-align: right;
 }
 
 .page-hero {
@@ -779,6 +798,71 @@ body.menu-open .menu-button span:last-child {
   display: grid;
 }
 
+.team-layout {
+  display: grid;
+  grid-template-columns: minmax(420px, 0.82fr) minmax(0, 1fr);
+  gap: clamp(24px, 4vw, 76px);
+  align-items: start;
+}
+
+.team-collage {
+  position: sticky;
+  top: 118px;
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 248, 236, 0.06);
+  box-shadow: var(--shadow);
+}
+
+.team-collage img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.team-role-list {
+  display: grid;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 248, 236, 0.045);
+}
+
+.team-role {
+  display: grid;
+  grid-template-columns: 116px 0.8fr 1fr;
+  gap: clamp(18px, 3vw, 56px);
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+  padding: clamp(28px, 4vw, 56px);
+}
+
+.team-role:last-child {
+  border-bottom: 0;
+}
+
+.team-role span,
+.journal-card-top span,
+.journal-card-top em,
+.brief-list span {
+  color: rgba(244, 200, 106, 0.72);
+  font-size: 13px;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.team-role h3 {
+  margin: 0;
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: clamp(32px, 3.7vw, 66px);
+  line-height: 1;
+}
+
 .process-row {
   display: grid;
   grid-template-columns: 160px minmax(220px, 0.9fr) minmax(320px, 1fr);
@@ -813,6 +897,168 @@ body.menu-open .menu-button span:last-child {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 48px;
+}
+
+.journal-feature {
+  padding-top: 20px;
+}
+
+.featured-post {
+  min-height: 440px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 34px;
+  align-items: end;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 22% 18%, rgba(244, 200, 106, 0.14), transparent 28%),
+    linear-gradient(135deg, rgba(255, 248, 236, 0.08), rgba(255, 248, 236, 0.035));
+  padding: clamp(32px, 6vw, 82px);
+}
+
+.featured-post h2 {
+  max-width: 1120px;
+  margin: 0 0 28px;
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: clamp(58px, 7vw, 132px);
+  line-height: 0.94;
+}
+
+.featured-post > span {
+  color: var(--gold);
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.journal-grid-section {
+  padding-top: 0;
+}
+
+.journal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 2.4vw, 42px);
+}
+
+.journal-card {
+  min-height: 360px;
+  display: grid;
+  align-content: space-between;
+  gap: 30px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 248, 236, 0.045);
+  padding: clamp(28px, 4vw, 58px);
+}
+
+.journal-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.journal-card h3 {
+  margin: 0 0 24px;
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: clamp(40px, 4.4vw, 76px);
+  line-height: 0.96;
+}
+
+.journal-card small {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact-section {
+  padding-top: 20px;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.65fr) minmax(0, 1fr);
+  gap: clamp(28px, 6vw, 110px);
+  align-items: start;
+}
+
+.contact-copy h2,
+.brief-panel h3 {
+  margin: 0 0 24px;
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: clamp(52px, 6vw, 108px);
+  line-height: 0.98;
+}
+
+.channel-list {
+  display: grid;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 248, 236, 0.045);
+}
+
+.channel-card {
+  display: grid;
+  gap: 14px;
+  border-bottom: 1px solid var(--line);
+  padding: clamp(28px, 4vw, 54px);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.channel-card:last-child {
+  border-bottom: 0;
+}
+
+.channel-card:hover {
+  background: rgba(244, 200, 106, 0.11);
+}
+
+.channel-card span {
+  color: var(--gold);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.channel-card strong {
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: clamp(34px, 4.2vw, 72px);
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+.brief-panel {
+  margin-top: clamp(36px, 6vw, 86px);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 85% 18%, rgba(244, 200, 106, 0.12), transparent 26%),
+    rgba(255, 248, 236, 0.045);
+  padding: clamp(32px, 5vw, 72px);
+}
+
+.brief-list {
+  display: grid;
+  gap: 18px;
+  margin: 34px 0 42px;
+}
+
+.brief-list p {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
 }
 
 .case-page {
@@ -1035,12 +1281,19 @@ body.menu-open .menu-button span:last-child {
 
   .fields-layout,
   .case-hero,
-  .case-details {
+  .case-details,
+  .team-layout,
+  .contact-layout {
     grid-template-columns: 1fr;
   }
 
   .field-feature {
     min-height: 560px;
+  }
+
+  .team-collage {
+    position: relative;
+    top: auto;
   }
 
   .process-row {
@@ -1134,7 +1387,8 @@ body.menu-open .menu-button span:last-child {
   .favorite-grid,
   .project-grid,
   .principle-grid,
-  .case-preview-grid {
+  .case-preview-grid,
+  .journal-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1175,8 +1429,63 @@ body.menu-open .menu-button span:last-child {
     padding-inline: 14px;
   }
 
+  .manifest-section.compact {
+    min-height: auto;
+  }
+
   .manifest-section blockquote {
     font-size: clamp(38px, 10vw, 58px);
+  }
+
+  .section-note {
+    max-width: none;
+    text-align: left;
+  }
+
+  .team-role {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 24px;
+  }
+
+  .team-role h3,
+  .journal-card h3,
+  .channel-card strong {
+    font-size: clamp(34px, 11vw, 54px);
+  }
+
+  .featured-post {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding: 26px;
+  }
+
+  .featured-post h2 {
+    font-size: clamp(44px, 13vw, 68px);
+  }
+
+  .journal-card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .journal-card-top {
+    flex-direction: column;
+  }
+
+  .contact-copy h2,
+  .brief-panel h3 {
+    font-size: clamp(44px, 13vw, 68px);
+  }
+
+  .channel-card,
+  .brief-panel {
+    padding: 24px;
+  }
+
+  .brief-list p {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
   .process-row {

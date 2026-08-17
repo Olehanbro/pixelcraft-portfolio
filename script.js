@@ -177,10 +177,82 @@ const principles = [
 ];
 
 const processSteps = [
-  ["01.", "Зібрати сенс", "Фіксую, що сайт має пояснити, кому він потрібен і яка дія має бути очевидною."],
-  ["02.", "Побудувати ритм", "Розкладаю сторінку на hero, докази, роботи, деталі й CTA так, щоб людина не губилася."],
-  ["03.", "Зробити в коді", "Верстаю адаптивну систему компонентів, де нові роботи додаються через дані, а не через хаос у розмітці."],
-  ["04.", "Перевірити наживо", "Збірка, браузер, mobile, wide desktop, direct routes і production deploy. Без цього сайт ще не готовий."]
+  ["01.", "Слухаємо", "Збираємо задачу, контекст, аудиторію й реальні приклади сайтів, які подобаються або дратують."],
+  ["02.", "Складаємо структуру", "Перший екран, роботи, аргументи, контакт і маршрут користувача мають бути зрозумілими до дизайну."],
+  ["03.", "Робимо в коді", "Верстаємо адаптивні сторінки, компоненти й дані так, щоб нові роботи додавались без переписування сайту."],
+  ["04.", "Публікуємо", "Перевіряємо build, wide/mobile, direct routes і живий deployment. Після запуску лишається місце для правок."]
+];
+
+const teamRoles = [
+  {
+    title: "Власник / розробка",
+    text: "Архітектура сторінок, фронтенд, адаптивність і запуск на production."
+  },
+  {
+    title: "Дизайн-напрям",
+    text: "Типографіка, композиція, ритм секцій і візуальна логіка портфоліо."
+  },
+  {
+    title: "Контент",
+    text: "Тексти без канцеляриту: коротко, по суті, під конкретний кейс."
+  },
+  {
+    title: "Перевірка",
+    text: "Скріншоти, mobile, wide desktop, клікабельність карток і чистий deploy."
+  }
+];
+
+const journalPosts = [
+  {
+    title: "Чому портфоліо має відкриватися з робіт",
+    tag: "Портфоліо",
+    date: "17 серпня 2026",
+    readTime: "6 хв",
+    excerpt: "Про перший екран, який не пояснює себе надто довго, а швидко веде до реальних сайтів."
+  },
+  {
+    title: "Картка кейсу: що має бути видно одразу",
+    tag: "Кейс",
+    date: "12 серпня 2026",
+    readTime: "8 хв",
+    excerpt: "Назва, сфера, прев'ю, короткий опис і live URL. Решта має допомагати, а не заважати."
+  },
+  {
+    title: "Як додавати майбутні роботи через код",
+    tag: "Метод",
+    date: "8 серпня 2026",
+    readTime: "5 хв",
+    excerpt: "Структура даних для портфоліо: без адмінки, але з нормальними полями для росту."
+  },
+  {
+    title: "Велика типографіка без хаосу",
+    tag: "Дизайн",
+    date: "2 серпня 2026",
+    readTime: "7 хв",
+    excerpt: "Коли serif-заголовок працює як настрій, а коли він просто займає весь екран без сенсу."
+  },
+  {
+    title: "Production-посилання важливіші за мокапи",
+    tag: "Запуск",
+    date: "25 липня 2026",
+    readTime: "4 хв",
+    excerpt: "Сайт у портфоліо має бути живим: відкритим, адаптивним і перевіреним після деплою."
+  }
+];
+
+const contactChannels = [
+  {
+    eyebrow: "— Пошта",
+    title: brandConfig.email,
+    text: "Найпряміший канал для задачі, референсів і короткого опису проєкту.",
+    href: `mailto:${brandConfig.email}`
+  },
+  {
+    eyebrow: "— GitHub",
+    title: "Olehanbro",
+    text: "Код, репозиторії й технічний контекст по вже зібраних роботах.",
+    href: brandConfig.github
+  }
 ];
 
 const app = document.querySelector("#app");
@@ -212,10 +284,10 @@ const renderHero = () => `
     <div class="hero-overlay"></div>
     <div class="hero-content reveal-up">
       <p class="hero-kicker">— Портфоліо веброзробника · 2026</p>
-      <h1 id="hero-title">Веброзробка, що тримає форму. <span>Без зайвого шуму.</span></h1>
+      <h1 id="hero-title">Сайти, які можна <span>відкрити наживо.</span></h1>
       <p>
-        Добірка живих сайтів: від AI-консалтингу до fashion e-commerce.
-        Кожна робота має окремий кейс, прев'ю і посилання на production.
+        Портфоліо веброзробника: реальні сторінки, великі прев'ю,
+        короткі кейси й прямі посилання на production.
       </p>
       <a class="primary-link hero-cta" href="/projects" data-link>Подивитись роботи</a>
     </div>
@@ -314,9 +386,9 @@ const renderManifest = () => `
   </section>
 `;
 
-const renderPrinciples = () => `
+const renderPrinciples = (title = "Три принципи, яких тримається портфоліо.") => `
   <section class="section-block principles-section" aria-labelledby="principles-title">
-    <h2 id="principles-title">Три принципи, яких тримається портфоліо.</h2>
+    <h2 id="principles-title">${title}</h2>
     <div class="principle-grid">
       ${principles
         .map(
@@ -349,8 +421,8 @@ const renderCatalog = () => {
   app.innerHTML = `
     <section class="page-hero catalog-hero" aria-labelledby="catalog-title">
       <p class="hero-kicker">Головна / Портфоліо</p>
-      <h1 id="catalog-title">Портфоліо, у якому кожна робота — окремий кейс.</h1>
-      <p>Фільтруй за сферою, відкривай деталі, дивись прев'ю і переходь на живий сайт.</p>
+      <h1 id="catalog-title">Добірка сайтів, які вже працюють.</h1>
+      <p>Фільтруй за сферою, відкривай кейси, дивись прев'ю і переходь на live URL.</p>
       <div class="filter-bar" aria-label="Фільтри за сферами">
         ${fieldFilters
           .map((field) => {
@@ -376,12 +448,44 @@ const renderCatalog = () => {
 
 const renderAbout = () => `
   <section class="page-hero about-hero" aria-labelledby="about-title">
-    <p class="hero-kicker">— Про підхід · PixelCraft</p>
-    <h1 id="about-title">Один розробник, який робить сайт як систему, а не як макет.</h1>
-    <p>Портфоліо зібране так, щоб кожен новий проєкт можна було додати через код: назва, опис, сфери, технології, прев'ю і live URL.</p>
+    <p class="hero-kicker">— Про нас · PixelCraft</p>
+    <h1 id="about-title">Невелика команда, яка збирає сайти до живого стану.</h1>
+    <p>Ми не продаємо “ще один красивий екран”. Ми робимо структуру, верстку, тексти й production-запуск так, щоб роботу можна було показати без пояснень.</p>
+  </section>
+  <section class="manifest-section compact" aria-label="Маніфест PixelCraft">
+    <blockquote class="reveal-up">
+      «Кейс має відкриватися не як картинка, а як живий сайт: зі зрозумілим першим екраном,
+      акуратною адаптивністю і нормальним шляхом до контакту».
+    </blockquote>
+    <p>— нотатка PixelCraft · 2026</p>
+  </section>
+  ${renderPrinciples("Три принципи, яких ми дотримуємось.")}
+  <section class="section-block team-section" aria-labelledby="team-title">
+    <div class="section-heading split reveal-up">
+      <h2 id="team-title">Команда — ролі, які тримають сайт у формі.</h2>
+      <span class="section-note">Тимчасовий командний візуал, який легко замінити реальними фото.</span>
+    </div>
+    <div class="team-layout">
+      <figure class="team-collage reveal-up">
+        <img src="/assets/team/pixelcraft-team-collage.png" alt="Згенерований командний візуал PixelCraft" />
+      </figure>
+      <div class="team-role-list">
+        ${teamRoles
+          .map(
+            (role, index) => `
+              <article class="team-role reveal-up">
+                <span>${numbered(index)}</span>
+                <h3>${role.title}</h3>
+                <p>${role.text}</p>
+              </article>
+            `
+          )
+          .join("")}
+      </div>
+    </div>
   </section>
   <section class="section-block process-section" aria-labelledby="process-title">
-    <h2 id="process-title">Процес — чотири фази, кожна зі своїм сенсом.</h2>
+    <h2 id="process-title">Процес — чотири фази, кожна зі своїм завданням.</h2>
     <div class="process-list">
       ${processSteps
         .map(
@@ -396,18 +500,82 @@ const renderAbout = () => `
         .join("")}
     </div>
   </section>
-  ${renderPrinciples()}
+`;
+
+const renderJournal = () => `
+  <section class="page-hero journal-hero" aria-labelledby="journal-title">
+    <p class="hero-kicker">Журнал · том I · випуск 01</p>
+    <h1 id="journal-title">Нотатки про сайти, кейси і живий фронтенд.</h1>
+    <p>Короткі матеріали про портфоліо, структуру кейсів, дизайн-рішення й те, як не перетворити сайт на набір випадкових блоків.</p>
+  </section>
+  <section class="section-block journal-feature" aria-labelledby="featured-post-title">
+    <article class="featured-post reveal-up">
+      <div>
+        <p class="hero-kicker">★ Матеріал номера · ${journalPosts[0].date}</p>
+        <h2 id="featured-post-title">${journalPosts[0].title}</h2>
+        <p>${journalPosts[0].excerpt}</p>
+      </div>
+      <span>${journalPosts[0].readTime}</span>
+    </article>
+  </section>
+  <section class="section-block journal-grid-section" aria-label="Матеріали журналу">
+    <div class="journal-grid">
+      ${journalPosts
+        .slice(1)
+        .map(
+          (post) => `
+            <article class="journal-card reveal-up">
+              <div class="journal-card-top">
+                <span>${post.tag}</span>
+                <em>${post.readTime}</em>
+              </div>
+              <h3>${post.title}</h3>
+              <p>${post.excerpt}</p>
+              <small>${post.date}</small>
+            </article>
+          `
+        )
+        .join("")}
+    </div>
+  </section>
 `;
 
 const renderContacts = () => `
   <section class="page-hero contact-hero" aria-labelledby="contact-title">
-    <p class="hero-kicker">— Контакт</p>
-    <h1 id="contact-title">Є сайт, який треба зробити акуратно?</h1>
-    <p>Напиши напряму. Без форми, без зайвих полів, без маленького театру навколо кнопки.</p>
-    <div class="contact-actions">
-      <a class="primary-link" href="mailto:${brandConfig.email}">Email</a>
-      <a class="ghost-link strong" href="${brandConfig.github}" target="_blank" rel="noreferrer">GitHub</a>
+    <p class="hero-kicker">Зв'язатися · відповідаємо напряму</p>
+    <h1 id="contact-title">Розкажи, який сайт треба зібрати.</h1>
+    <p>Надішли короткий опис, референси й бажаний результат. Достатньо нормального повідомлення без довгої анкети.</p>
+  </section>
+  <section class="section-block contact-section" aria-labelledby="channels-title">
+    <div class="contact-layout">
+      <div class="contact-copy reveal-up">
+        <h2 id="channels-title">Прямі канали</h2>
+        <p>Email — для задачі й референсів. GitHub — для технічного контексту та вже зібраних робіт.</p>
+      </div>
+      <div class="channel-list reveal-up">
+        ${contactChannels
+          .map(
+            (channel) => `
+              <a class="channel-card" href="${channel.href}" ${channel.href.startsWith("http") ? 'target="_blank" rel="noreferrer"' : ""}>
+                <span>${channel.eyebrow}</span>
+                <strong>${channel.title}</strong>
+                <p>${channel.text}</p>
+              </a>
+            `
+          )
+          .join("")}
+      </div>
     </div>
+    <aside class="brief-panel reveal-up" aria-label="Що написати в першому повідомленні">
+      <h3>Що написати в першому повідомленні</h3>
+      <div class="brief-list">
+        <p><span>01.</span> Що це за сайт: портфоліо, лендинг, e-commerce, сервіс або кейс.</p>
+        <p><span>02.</span> Посилання на референси й 2-3 речі, які подобаються.</p>
+        <p><span>03.</span> Які сторінки точно потрібні на першому запуску.</p>
+        <p><span>04.</span> Дедлайн або приблизний темп роботи.</p>
+      </div>
+      <a class="primary-link" href="mailto:${brandConfig.email}">Написати email</a>
+    </aside>
   </section>
 `;
 
@@ -473,7 +641,8 @@ const renderFooter = () => {
       <nav class="footer-nav" aria-label="Footer navigation">
         <span>Навігація</span>
         <a href="/projects" data-link>Портфоліо</a>
-        <a href="/about" data-link>Про підхід</a>
+        <a href="/about" data-link>Про нас</a>
+        <a href="/blog" data-link>Журнал</a>
         <a href="/contacts" data-link>Контакти</a>
       </nav>
       <div class="footer-links" aria-label="Contact links">
@@ -533,6 +702,8 @@ const renderRoute = () => {
     renderCatalog();
   } else if (path === "/about") {
     app.innerHTML = renderAbout();
+  } else if (path === "/blog" || path === "/journal") {
+    app.innerHTML = renderJournal();
   } else if (path === "/contacts") {
     app.innerHTML = renderContacts();
   } else if (caseMatch) {

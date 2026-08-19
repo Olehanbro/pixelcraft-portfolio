@@ -7,11 +7,13 @@ export function BadgeList({ items }) {
 }
 
 export function ProjectCard({ project, featured = false, priority = false }) {
+  const previewImage = project.heroImage || project.screenshots[0];
+
   return (
     <Link className={`project-card reveal-up ${featured ? "featured" : ""}`} href={projectUrl(project)} aria-label={`Відкрити кейс ${project.title}`}>
       <div className="project-main-image">
         <Image
-          src={project.screenshots[0]}
+          src={previewImage}
           alt={`${project.title} preview`}
           fill
           priority={priority}

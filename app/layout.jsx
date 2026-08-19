@@ -18,7 +18,7 @@ export const metadata = {
     locale: "uk_UA",
     siteName: brandConfig.name,
     title: `${brandConfig.name} | Портфоліо веброзробника`,
-    description: "Myshchyshyn: живі сайти, портфоліо, команда, журнал і прямий контакт для нового проєкту.",
+    description: "Myshchyshyn: живі сайти, портфоліо, команда і прямий контакт для нового проєкту.",
     images: ["/og.png"]
   },
   twitter: {

@@ -17,16 +17,11 @@ import {
 } from "@/lib/data";
 
 export function HomeHero() {
-  const heroPreviewProjects = projects.filter((project) => project.favorite).slice(0, 4);
-
   return (
     <section className="hero hero-stage" aria-labelledby="hero-title">
       <div className="hero-background" aria-hidden="true" />
       <div className="hero-overlay" />
       <div className="hero-content hero-layout reveal-up">
-        <span className="hero-monogram" aria-hidden="true">
-          M
-        </span>
         <div className="hero-copy">
           <h1 id="hero-title">
             Сайти, що <span>працюють</span>
@@ -40,26 +35,6 @@ export function HomeHero() {
           className="hero-owner-card hero-portrait-stage"
           aria-label="Місце для майбутнього фото власника"
         >
-          <div className="hero-preview-cloud" aria-label="Швидкі прев'ю проєктів">
-            {heroPreviewProjects.map((project, index) => (
-              <Link
-                className={`hero-preview-chip chip-${index + 1}`}
-                href={projectUrl(project)}
-                key={project.slug}
-                aria-label={`Відкрити кейс ${project.title}`}
-              >
-                <Image
-                  src={project.screenshots[0]}
-                  alt=""
-                  fill
-                  sizes="128px"
-                  style={{ objectFit: "cover" }}
-                  aria-hidden="true"
-                />
-                <span>{project.title}</span>
-              </Link>
-            ))}
-          </div>
           <OwnerPortrait modifier="hero-owner" />
         </aside>
       </div>

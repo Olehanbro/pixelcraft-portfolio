@@ -15,7 +15,6 @@ export function Footer() {
           <span>Навігація</span>
           <Link href="/projects">Портфоліо</Link>
           <Link href="/about">Про нас</Link>
-          <Link href="/blog">Журнал</Link>
           <Link href="/contacts">Контакти</Link>
         </nav>
         <div className="footer-links" aria-label="Contact links">

@@ -9,7 +9,6 @@ const navItems = [
   { href: "/", label: "Головна" },
   { href: "/projects", label: "Портфоліо" },
   { href: "/about", label: "Про нас" },
-  { href: "/blog", label: "Журнал" },
   { href: "/contacts", label: "Контакти" }
 ];
 
@@ -36,7 +35,6 @@ export function Header() {
 
   const isActive = (href) => {
     if (href === "/") return pathname === "/";
-    if (href === "/blog") return pathname === "/blog" || pathname === "/journal";
     return pathname === href || pathname.startsWith(`${href}/`);
   };
 

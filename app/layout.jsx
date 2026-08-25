@@ -5,27 +5,39 @@ import { brandConfig } from "@/lib/data";
 
 export const metadata = {
   metadataBase: new URL("https://pixelcraft-portfolio-gilt.vercel.app"),
+  applicationName: brandConfig.name,
   title: {
-    default: `${brandConfig.name} | Портфоліо веброзробника`,
+    default: `${brandConfig.name} | Живі сайти та портфоліо`,
     template: `%s | ${brandConfig.name}`
   },
   description:
-    "Myshchyshyn - портфоліо веброзробника з живими сайтами, великими прев'ю, окремими кейсами та production-посиланнями.",
+    "Myshchyshyn - портфоліо живих сайтів з великими прев'ю, окремими кейсами та production-посиланнями.",
   authors: [{ name: brandConfig.name }],
   creator: brandConfig.name,
+  appleWebApp: {
+    title: brandConfig.name
+  },
   openGraph: {
     type: "website",
     locale: "uk_UA",
+    url: "/",
     siteName: brandConfig.name,
-    title: `${brandConfig.name} | Портфоліо веброзробника`,
-    description: "Myshchyshyn: живі сайти, портфоліо, команда і прямий контакт для нового проєкту.",
-    images: ["/og.png"]
+    title: `${brandConfig.name} | Живі сайти та портфоліо`,
+    description: "Добірка живих сайтів, кейсів і production-посилань для швидкої перевірки робіт.",
+    images: [
+      {
+        url: "/og-myshchyshyn.png",
+        width: 1200,
+        height: 630,
+        alt: "Myshchyshyn portfolio preview"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
-    title: `${brandConfig.name} Portfolio`,
-    description: "Selected websites, screenshots, and live project links.",
-    images: ["/og.png"]
+    title: `${brandConfig.name} | Живі сайти та портфоліо`,
+    description: "Добірка живих сайтів, кейсів і production-посилань.",
+    images: ["/og-myshchyshyn.png"]
   }
 };
 

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Myshchyshyn portfolio preview</title>
+  <desc id="desc">Open graph image for Myshchyshyn portfolio</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#120718"/>
+      <stop offset="46%" stop-color="#2c1238"/>
+      <stop offset="100%" stop-color="#4b2a24"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#25112f"/>
+      <stop offset="100%" stop-color="#68453f"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#5d3d70" stop-opacity=".74"/>
+      <stop offset="100%" stop-color="#8f6758" stop-opacity=".48"/>
+    </linearGradient>
+    <filter id="blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="42"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="760" cy="155" r="210" fill="#6c33ff" opacity=".18" filter="url(#blur)"/>
+  <circle cx="980" cy="520" r="260" fill="#d09a5c" opacity=".16" filter="url(#blur)"/>
+  <g opacity=".28" stroke="#a78b9f" stroke-width="1">
+    <path d="M90 92h1020M90 212h1020M90 332h1020M90 452h1020"/>
+    <path d="M150 62v500M330 62v500M510 62v500M690 62v500M870 62v500M1050 62v500"/>
+  </g>
+  <rect x="22" y="22" width="1156" height="586" rx="34" fill="none" stroke="#a76f5f" stroke-width="2"/>
+  <text x="86" y="126" fill="#f5c867" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800" letter-spacing="14">PORTFOLIO</text>
+  <text x="82" y="248" fill="#fff7eb" font-family="Georgia, 'Times New Roman', serif" font-size="88" font-weight="700">Myshchyshyn</text>
+  <text x="88" y="318" fill="#d6c4d6" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Живі сайти, кейси та production-посилання</text>
+  <line x1="86" y1="500" x2="1114" y2="500" stroke="#a76f5f" stroke-width="2"/>
+  <text x="88" y="548" fill="#c5b2c0" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" letter-spacing="12">WEBSITES RESPONSIVE VERCEL</text>
+  <g transform="translate(735 116)">
+    <rect width="355" height="300" rx="36" fill="url(#panel)" stroke="#a78b9f" stroke-opacity=".45"/>
+    <circle cx="35" cy="30" r="7" fill="#ff6b60"/>
+    <circle cx="58" cy="30" r="7" fill="#f5c867"/>
+    <circle cx="81" cy="30" r="7" fill="#63d47a"/>
+    <rect x="34" y="78" width="287" height="184" rx="28" fill="url(#glass)"/>
+    <rect x="66" y="122" width="118" height="17" rx="9" fill="#d6c4d6" opacity=".82"/>
+    <rect x="66" y="158" width="184" height="14" rx="8" fill="#d6c4d6" opacity=".56"/>
+    <rect x="66" y="188" width="142" height="14" rx="8" fill="#d6c4d6" opacity=".5"/>
+    <path d="M200 214 C232 164 260 224 296 148" fill="none" stroke="#38d4ff" stroke-width="8" stroke-linecap="round"/>
+    <path d="M212 248 C248 218 274 274 306 210" fill="none" stroke="#f5c867" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+    <circle cx="266" cy="132" r="39" fill="none" stroke="#f5c867" stroke-width="4"/>
+    <circle cx="206" cy="166" r="27" fill="none" stroke="#38d4ff" stroke-width="4"/>
+  </g>
+</svg>

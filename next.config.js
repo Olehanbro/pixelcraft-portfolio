@@ -1,5 +1,31 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "pixelcraft-portfolio-gilt.vercel.app"
+          }
+        ],
+        destination: "https://myshchyshyn-portfolio.vercel.app/:path*",
+        permanent: true
+      },
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "pixelcraft-portfolio-olehanbros-projects.vercel.app"
+          }
+        ],
+        destination: "https://myshchyshyn-portfolio.vercel.app/:path*",
+        permanent: true
+      }
+    ];
+  },
   async rewrites() {
     return [
       {

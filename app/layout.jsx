@@ -4,7 +4,7 @@ import { Footer } from "@/components/Footer";
 import { brandConfig } from "@/lib/data";
 
 export const metadata = {
-  metadataBase: new URL("https://pixelcraft-portfolio-gilt.vercel.app"),
+  metadataBase: new URL("https://myshchyshyn-portfolio.vercel.app"),
   applicationName: brandConfig.name,
   title: {
     default: `${brandConfig.name} | Живі сайти та портфоліо`,

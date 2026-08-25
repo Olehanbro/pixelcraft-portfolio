@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Aurelia cover</title>
+  <desc id="desc">Quiet luxury boutique cover with elegant product frames.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#180719"/>
+      <stop offset=".5" stop-color="#2b1023"/>
+      <stop offset="1" stop-color="#4a2c18"/>
+    </linearGradient>
+    <radialGradient id="gold" cx=".72" cy=".38" r=".5">
+      <stop offset="0" stop-color="#f4c86a" stop-opacity=".36"/>
+      <stop offset=".45" stop-color="#fff8ec" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#gold)"/>
+  <g transform="translate(112 120)">
+    <text fill="#f4c86a" font-family="Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="12">LUXURY RETAIL</text>
+    <text y="188" fill="#fff8ec" font-family="Georgia, serif" font-size="160" font-weight="700">Aurelia</text>
+    <text y="282" fill="#d8cbd6" font-family="Arial, sans-serif" font-size="34">Тиха вітрина для преміального бренду.</text>
+  </g>
+  <g transform="translate(810 138)">
+    <rect x="0" y="70" width="214" height="450" rx="106" fill="#fff8ec" opacity=".11" stroke="#f4c86a" stroke-opacity=".46"/>
+    <rect x="252" y="0" width="214" height="520" rx="106" fill="#f4c86a" opacity=".18" stroke="#f4c86a" stroke-opacity=".58"/>
+    <rect x="504" y="112" width="214" height="408" rx="106" fill="#fff8ec" opacity=".08" stroke="#f4c86a" stroke-opacity=".34"/>
+    <path d="M54 618H646M130 672H560" stroke="#fff8ec" stroke-opacity=".28" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <path d="M92 856H1508" stroke="#f4c86a" stroke-opacity=".4"/>
+  <text x="116" y="912" fill="#fff8ec" opacity=".58" font-family="Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="10">E-COMMERCE FASHION RESPONSIVE</text>
+</svg>

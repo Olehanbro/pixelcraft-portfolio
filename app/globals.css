@@ -978,33 +978,50 @@ body.menu-open .menu-button span:last-child {
 
 .filter-button {
   min-height: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 248, 236, 0.045);
-  color: var(--ink-soft);
-  padding: 0 24px;
+  background:
+    linear-gradient(135deg, rgba(244, 200, 106, 0.09), rgba(122, 60, 255, 0.08)),
+    rgba(255, 248, 236, 0.035);
+  color: rgba(244, 200, 106, 0.86);
+  padding: 0 26px;
+  font-family: var(--font-main);
   font-size: 15px;
   font-weight: 900;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
 }
 
 .filter-button:hover,
 .filter-button[aria-pressed="true"] {
-  border-color: var(--gold);
-  background: var(--paper);
-  color: #1b0c22;
+  border-color: rgba(244, 200, 106, 0.96);
+  background:
+    linear-gradient(135deg, rgba(244, 200, 106, 0.22), rgba(217, 154, 53, 0.1)),
+    rgba(255, 248, 236, 0.06);
+  color: var(--gold);
+  box-shadow: 0 0 26px rgba(244, 200, 106, 0.12);
 }
 
 .filter-button:disabled {
   cursor: not-allowed;
-  opacity: 0.42;
+  opacity: 0.52;
 }
 
 .filter-button span {
-  margin-left: 10px;
+  min-width: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: inherit;
   font-size: 12px;
+  line-height: 1;
 }
 
 .catalog-section {
@@ -2019,6 +2036,7 @@ body.menu-open .menu-button span:last-child {
   .filter-button {
     min-height: 46px;
     padding-inline: 16px;
+    font-size: 14px;
   }
 
   .catalog-count {

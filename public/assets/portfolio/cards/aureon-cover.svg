@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Aureon cover</title>
+  <desc id="desc">Industrial service cover with architectural golden lines.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#160719"/>
+      <stop offset=".45" stop-color="#24101d"/>
+      <stop offset="1" stop-color="#4b3217"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".72" cy=".36" r=".5">
+      <stop offset="0" stop-color="#f4c86a" stop-opacity=".4"/>
+      <stop offset=".52" stop-color="#d99a35" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#sun)"/>
+  <g transform="translate(112 122)">
+    <text fill="#f4c86a" font-family="Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="12">БУДІВЕЛЬНИЙ СЕРВІС</text>
+    <text y="188" fill="#fff8ec" font-family="Georgia, serif" font-size="160" font-weight="700">Aureon</text>
+    <text y="282" fill="#d8cbd6" font-family="Arial, sans-serif" font-size="34">Великий кадр, надійна структура, спокійна дія.</text>
+  </g>
+  <g transform="translate(820 180)" stroke="#f4c86a" fill="none">
+    <path d="M30 474H664M86 474V146M208 474V94M330 474V188M452 474V124M574 474V66" stroke-opacity=".7" stroke-width="5"/>
+    <path d="M44 304L610 94M44 404L610 194" stroke-opacity=".38" stroke-width="4"/>
+    <rect x="72" y="124" width="502" height="350" rx="26" stroke-opacity=".34"/>
+    <circle cx="552" cy="96" r="62" fill="#f4c86a" fill-opacity=".18" stroke-opacity=".55"/>
+  </g>
+  <path d="M92 856H1508" stroke="#f4c86a" stroke-opacity=".4"/>
+  <text x="116" y="912" fill="#fff8ec" opacity=".58" font-family="Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="10">LANDING BRAND RESPONSIVE</text>
+</svg>

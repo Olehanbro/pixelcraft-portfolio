@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Kursor Strategy cover</title>
+  <desc id="desc">Dark editorial strategy dashboard cover with gold and blue accents.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#220832"/>
+      <stop offset=".45" stop-color="#100514"/>
+      <stop offset="1" stop-color="#351438"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".34" r=".52">
+      <stop offset="0" stop-color="#2f7bff" stop-opacity=".56"/>
+      <stop offset=".36" stop-color="#f4c86a" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <g opacity=".18">
+    <path d="M0 180H1600M0 330H1600M0 480H1600M0 630H1600M0 780H1600M220 0V1000M440 0V1000M660 0V1000M880 0V1000M1100 0V1000M1320 0V1000" stroke="#fff8ec"/>
+  </g>
+  <g transform="translate(116 108)">
+    <text fill="#f4c86a" font-family="Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="12">СТРАТЕГІЯ</text>
+    <text y="176" fill="#fff8ec" font-family="Georgia, serif" font-size="132" font-weight="700">Kursor</text>
+    <text y="302" fill="#fff8ec" font-family="Georgia, serif" font-size="132" font-weight="700">Strategy</text>
+    <text y="388" fill="#d8cbd6" font-family="Arial, sans-serif" font-size="34">Кероване зростання без зайвого шуму.</text>
+  </g>
+  <g transform="translate(900 190)">
+    <rect width="548" height="430" rx="44" fill="#fff8ec" opacity=".09" stroke="#f4c86a" stroke-opacity=".48"/>
+    <path d="M72 304C150 218 222 258 294 162C372 58 442 92 500 34" fill="none" stroke="#f4c86a" stroke-width="10" stroke-linecap="round"/>
+    <path d="M72 344H470M72 380H362M72 116H226M72 164H308M72 212H188" stroke="#fff8ec" stroke-opacity=".42" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="408" cy="126" r="76" fill="#2f7bff"/>
+    <circle cx="408" cy="126" r="112" fill="#2f7bff" opacity=".16" filter="url(#soft)"/>
+  </g>
+  <path d="M92 856H1508" stroke="#f4c86a" stroke-opacity=".4"/>
+  <text x="116" y="912" fill="#fff8ec" opacity=".58" font-family="Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="10">HTML CSS JAVASCRIPT</text>
+</svg>

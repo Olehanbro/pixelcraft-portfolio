@@ -12,7 +12,8 @@ export function OwnerPortrait({ modifier = "" }) {
           src={image}
           alt={alt}
           fill
-          priority={isHeroPortrait}
+          loading={isHeroPortrait ? "eager" : "lazy"}
+          fetchPriority={isHeroPortrait ? "high" : "auto"}
           sizes="(max-width: 820px) 320px, 390px"
           style={{ objectFit: "cover" }}
         />

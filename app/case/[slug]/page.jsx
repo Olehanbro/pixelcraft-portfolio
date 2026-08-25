@@ -39,6 +39,8 @@ export default async function CasePage({ params }) {
 
   if (!project) notFound();
 
+  const secondaryScreenshots = project.screenshots.slice(1);
+
   return (
     <article className="case-page">
       <section className="case-hero" aria-labelledby="case-title">
@@ -60,7 +62,8 @@ export default async function CasePage({ params }) {
             src={project.screenshots[0]}
             alt={`${project.title} hero preview`}
             fill
-            priority
+            loading="eager"
+            fetchPriority="high"
             sizes="(max-width: 1180px) 100vw, 56vw"
             style={{ objectFit: "cover" }}
           />
@@ -89,16 +92,18 @@ export default async function CasePage({ params }) {
           </div>
         </aside>
       </section>
-      <section className="case-preview-section" aria-label={`${project.title} previews`}>
-        <p className="hero-kicker">Прев'ю</p>
-        <div className="case-preview-grid">
-          {project.screenshots.map((src, index) => (
-            <div className="case-preview-image" key={src}>
-              <Image src={src} alt={`${project.title} preview ${index + 1}`} fill sizes="(max-width: 820px) 100vw, 50vw" style={{ objectFit: "cover" }} />
-            </div>
-          ))}
-        </div>
-      </section>
+      {secondaryScreenshots.length > 0 ? (
+        <section className="case-preview-section" aria-label={`${project.title} previews`}>
+          <p className="hero-kicker">Прев'ю</p>
+          <div className="case-preview-grid">
+            {secondaryScreenshots.map((src, index) => (
+              <div className="case-preview-image" key={src}>
+                <Image src={src} alt={`${project.title} preview ${index + 2}`} fill sizes="(max-width: 820px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+              </div>
+            ))}
+          </div>
+        </section>
+      ) : null}
     </article>
   );
 }

@@ -25,6 +25,46 @@ const nextConfig = {
       {
         source: "/sites/optimo-studio/",
         destination: "/sites/optimo-studio/index.html"
+      },
+      {
+        source: "/sites/baseframe",
+        destination: "/sites/baseframe/index.html"
+      },
+      {
+        source: "/sites/baseframe/",
+        destination: "/sites/baseframe/index.html"
+      },
+      {
+        source: "/sites/stravorex",
+        destination: "/sites/stravorex/index.html"
+      },
+      {
+        source: "/sites/stravorex/",
+        destination: "/sites/stravorex/index.html"
+      },
+      {
+        source: "/sites/mercket",
+        destination: "/sites/mercket/index.html"
+      },
+      {
+        source: "/sites/mercket/",
+        destination: "/sites/mercket/index.html"
+      },
+      {
+        source: "/sites/casho",
+        destination: "/sites/casho/index.html"
+      },
+      {
+        source: "/sites/casho/",
+        destination: "/sites/casho/index.html"
+      },
+      {
+        source: "/sites/vinsor",
+        destination: "/sites/vinsor/index.html"
+      },
+      {
+        source: "/sites/vinsor/",
+        destination: "/sites/vinsor/index.html"
       }
     ];
   }

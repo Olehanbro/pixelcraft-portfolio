@@ -118,22 +118,12 @@ blockquote {
 
 .brand {
   width: max-content;
-  gap: 12px;
   color: var(--paper);
   font-family: var(--font-display);
   font-size: 30px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0;
-}
-
-.brand::before {
-  content: "";
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--gold), var(--gold-2));
-  box-shadow: 14px 0 0 var(--violet);
 }
 
 .nav {

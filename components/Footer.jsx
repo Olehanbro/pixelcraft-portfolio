@@ -1,6 +1,31 @@
 import Link from "next/link";
 import { brandConfig } from "@/lib/data";
 
+const footerContactLinks = [
+  {
+    label: "Email",
+    value: brandConfig.email,
+    href: `mailto:${brandConfig.email}`
+  },
+  {
+    label: "Номер телефону",
+    value: brandConfig.phone,
+    href: `tel:${brandConfig.phone}`
+  },
+  {
+    label: "Telegram",
+    value: brandConfig.telegram.label,
+    href: brandConfig.telegram.href,
+    external: true
+  },
+  {
+    label: "Instagram",
+    value: brandConfig.instagram.label,
+    href: brandConfig.instagram.href,
+    external: true
+  }
+];
+
 export function Footer() {
   return (
     <footer className="site-footer">
@@ -19,14 +44,19 @@ export function Footer() {
         </nav>
         <div className="footer-links" aria-label="Contact links">
           <span>Зв'язок</span>
-          <a href={`mailto:${brandConfig.email}`}>Email</a>
-          <a href={`tel:${brandConfig.phone}`}>{brandConfig.phone}</a>
-          <a href={brandConfig.telegram.href} target="_blank" rel="noreferrer">
-            Telegram
-          </a>
-          <a href={brandConfig.instagram.href} target="_blank" rel="noreferrer">
-            Instagram
-          </a>
+          {footerContactLinks.map((link) => (
+            <a
+              className="footer-contact-link"
+              href={link.href}
+              key={link.label}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noreferrer" : undefined}
+            >
+              <em>{link.label}</em>
+              <i aria-hidden="true" />
+              <strong>{link.value}</strong>
+            </a>
+          ))}
         </div>
       </div>
       <div className="footer-word" aria-hidden="true">

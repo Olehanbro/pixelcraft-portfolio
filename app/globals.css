@@ -239,8 +239,7 @@ blockquote {
 
 .text-link::after,
 .project-meta::before,
-.footer-nav a::after,
-.footer-links a::after {
+.footer-nav a::after {
   content: "";
   width: 54px;
   height: 1px;
@@ -1656,6 +1655,35 @@ body.menu-open .menu-button span:last-child {
   font-family: var(--font-display);
   font-size: var(--type-footer-link);
   line-height: 1.08;
+}
+
+.footer-contact-link {
+  width: min(100%, 720px);
+  min-width: 0;
+}
+
+.footer-contact-link em,
+.footer-contact-link strong {
+  min-width: 0;
+  font: inherit;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.footer-contact-link em {
+  flex: 0 0 auto;
+}
+
+.footer-contact-link i {
+  flex: 1 1 42px;
+  min-width: clamp(30px, 4vw, 80px);
+  height: 1px;
+  background: currentColor;
+}
+
+.footer-contact-link strong {
+  flex: 0 1 auto;
+  overflow-wrap: anywhere;
 }
 
 .footer-word {

@@ -1646,6 +1646,11 @@ body.menu-open .menu-button span:last-child {
   gap: 20px;
 }
 
+.footer-links {
+  width: max-content;
+  max-width: 100%;
+}
+
 .footer-nav a,
 .footer-links a {
   display: inline-flex;
@@ -1658,11 +1663,12 @@ body.menu-open .menu-button span:last-child {
 }
 
 .footer-links a.footer-contact-link {
-  width: min(100%, 820px);
+  width: max-content;
+  max-width: 100%;
   min-width: 0;
   display: grid;
-  grid-template-columns: max-content minmax(42px, 1fr) max-content;
-  gap: clamp(14px, 1.6vw, 24px);
+  grid-template-columns: max-content clamp(52px, 5.4vw, 96px) max-content;
+  gap: clamp(12px, 1.15vw, 18px);
   align-items: baseline;
   font-size: clamp(24px, 2.1vw, 34px);
 }
@@ -1747,11 +1753,14 @@ body.menu-open .menu-button span:last-child {
   .footer-links {
     grid-column: 2;
     grid-row: 1 / span 2;
-    width: 100%;
+    width: max-content;
+    max-width: 100%;
   }
 
   .footer-links a.footer-contact-link {
-    width: 100%;
+    width: max-content;
+    max-width: 100%;
+    grid-template-columns: max-content clamp(42px, 6vw, 68px) max-content;
     font-size: clamp(28px, 3.8vw, 36px);
   }
 
@@ -2082,7 +2091,7 @@ body.menu-open .menu-button span:last-child {
   }
 
   .footer-links a.footer-contact-link {
-    grid-template-columns: max-content minmax(28px, 1fr) max-content;
+    grid-template-columns: max-content clamp(30px, 8vw, 54px) max-content;
     gap: 12px;
     font-size: clamp(24px, 6.8vw, 30px);
   }

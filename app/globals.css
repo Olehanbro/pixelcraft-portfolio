@@ -926,7 +926,7 @@ body.menu-open .menu-button span:last-child {
 
 .principle-card p,
 .process-row p,
-.team-role p,
+.team-member-copy p,
 .contact-copy p,
 .channel-card p,
 .brief-list p,
@@ -1052,91 +1052,58 @@ body.menu-open .menu-button span:last-child {
   display: grid;
 }
 
-.team-layout {
+.team-member-grid {
   display: grid;
-  grid-template-columns: minmax(420px, 0.82fr) minmax(0, 1fr);
-  gap: clamp(24px, 4vw, 76px);
-  align-items: start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
 }
 
-.team-photo-panel {
-  position: sticky;
-  top: 118px;
+.team-member-card {
+  min-width: 0;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 24px;
   background:
-    radial-gradient(circle at 18% 18%, rgba(244, 200, 106, 0.14), transparent 28%),
+    radial-gradient(circle at 18% 16%, rgba(244, 200, 106, 0.12), transparent 28%),
     linear-gradient(145deg, rgba(255, 248, 236, 0.06), rgba(255, 248, 236, 0.025)),
     rgba(255, 248, 236, 0.035);
-  padding: clamp(14px, 2vw, 24px);
   box-shadow: var(--shadow);
 }
 
-.team-photo-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(12px, 1.4vw, 18px);
-}
-
-.team-photo-slot {
-  min-width: 0;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: rgba(255, 248, 236, 0.035);
-}
-
-.team-photo-slot > span {
-  display: block;
-  min-height: 52px;
+.team-member-copy {
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   border-top: 1px solid var(--line);
-  color: rgba(244, 200, 106, 0.78);
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  padding: 16px;
+  padding: clamp(22px, 2.6vw, 32px);
+}
+
+.team-member-copy span {
+  margin-bottom: 18px;
+}
+
+.team-member-copy h3 {
+  margin: 0;
+  color: var(--paper);
+  font-family: var(--font-display);
+  font-size: clamp(42px, 4vw, 68px);
+  line-height: 0.94;
+}
+
+.team-member-copy strong {
+  display: block;
+  margin-top: 14px;
+  color: rgba(244, 200, 106, 0.82);
+  font-size: 14px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.team-photo-slot .owner-placeholder {
-  inset: 10px;
-}
-
-.team-photo-slot .owner-placeholder span {
-  font-size: clamp(22px, 1.9vw, 30px);
-}
-
-.team-photo-slot .owner-placeholder small {
-  font-size: 10px;
-}
-
-.team-role-list {
-  display: grid;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background:
-    linear-gradient(145deg, rgba(255, 248, 236, 0.055), rgba(255, 248, 236, 0.025)),
-    rgba(255, 248, 236, 0.035);
-}
-
-.team-role {
+.team-member-copy p {
+  margin: 20px 0 0;
   min-width: 0;
-  display: grid;
-  grid-template-columns: 170px minmax(220px, 0.72fr) minmax(260px, 1fr);
-  gap: clamp(18px, 3vw, 56px);
-  align-items: start;
-  border-bottom: 1px solid var(--line);
-  padding: clamp(28px, 4vw, 56px);
-}
-
-.team-role:last-child {
-  border-bottom: 0;
-}
-
-.team-role p {
-  min-width: 0;
+  color: var(--ink-soft);
   overflow-wrap: anywhere;
 }
 
@@ -1145,11 +1112,10 @@ body.menu-open .menu-button span:last-child {
   width: 100%;
   min-width: 0;
   overflow: hidden;
-  border-bottom: 1px solid var(--line);
   background:
     radial-gradient(circle at 50% 18%, rgba(255, 248, 236, 0.28), transparent 18%),
     linear-gradient(145deg, rgba(94, 34, 122, 0.85), rgba(13, 5, 18, 0.95));
-  aspect-ratio: 0.82;
+  aspect-ratio: 1.03;
 }
 
 .team-portrait::before,
@@ -1192,31 +1158,27 @@ body.menu-open .menu-button span:last-child {
     radial-gradient(circle at 84% 28%, rgba(122, 60, 255, 0.24), transparent 25%);
 }
 
-.team-portrait.woman-a {
+.team-portrait.zenovii {
   background:
-    radial-gradient(circle at 72% 20%, rgba(244, 200, 106, 0.24), transparent 22%),
-    linear-gradient(145deg, rgba(49, 13, 74, 0.9), rgba(78, 36, 78, 0.82));
+    radial-gradient(circle at 74% 18%, rgba(244, 200, 106, 0.22), transparent 22%),
+    radial-gradient(circle at 20% 72%, rgba(128, 61, 255, 0.22), transparent 28%),
+    linear-gradient(145deg, rgba(42, 13, 64, 0.94), rgba(77, 43, 79, 0.86));
 }
 
-.team-portrait.woman-b {
+.team-portrait.serhii {
   background:
-    radial-gradient(circle at 28% 22%, rgba(255, 248, 236, 0.18), transparent 22%),
-    linear-gradient(145deg, rgba(90, 34, 105, 0.86), rgba(31, 10, 42, 0.95));
-}
-
-.team-portrait.man {
-  background:
-    radial-gradient(circle at 70% 72%, rgba(244, 200, 106, 0.18), transparent 24%),
-    linear-gradient(145deg, rgba(36, 12, 58, 0.92), rgba(14, 5, 20, 0.96));
+    radial-gradient(circle at 22% 20%, rgba(255, 248, 236, 0.16), transparent 22%),
+    radial-gradient(circle at 76% 74%, rgba(244, 200, 106, 0.18), transparent 24%),
+    linear-gradient(145deg, rgba(32, 10, 54, 0.94), rgba(14, 5, 20, 0.96));
 }
 
 .team-owner {
   border: 0;
   border-radius: 0;
-  aspect-ratio: 0.82;
+  aspect-ratio: 1.03;
 }
 
-.team-role span,
+.team-member-copy span,
 .journal-card-top span,
 .journal-card-top em,
 .brief-list span {
@@ -1226,14 +1188,6 @@ body.menu-open .menu-button span:last-child {
   font-style: normal;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-}
-
-.team-role h3 {
-  margin: 0;
-  color: var(--paper);
-  font-family: var(--font-display);
-  font-size: var(--type-card);
-  line-height: 1;
 }
 
 .process-row {
@@ -1750,14 +1704,12 @@ body.menu-open .menu-button span:last-child {
   .case-hero,
   .case-details,
   .contact-fold,
-  .team-layout,
   .hero-layout {
     grid-template-columns: 1fr;
   }
 
-  .team-photo-panel {
-    position: relative;
-    top: auto;
+  .team-member-grid {
+    grid-template-columns: 1fr;
   }
 
   .field-feature {
@@ -1934,17 +1886,12 @@ body.menu-open .menu-button span:last-child {
     text-align: left;
   }
 
-  .team-photo-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .team-role {
-    grid-template-columns: 1fr;
-    gap: 14px;
+  .team-member-copy {
+    min-height: auto;
     padding: 24px;
   }
 
-  .team-role h3,
+  .team-member-copy h3,
   .journal-card h3,
   .channel-card strong {
     font-size: clamp(28px, 8.2vw, 40px);

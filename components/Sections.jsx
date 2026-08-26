@@ -146,33 +146,23 @@ export function TeamSection() {
   return (
     <section className="section-block team-section" aria-labelledby="team-title">
       <div className="section-heading split reveal-up">
-        <h2 id="team-title">Ролі команди в одному робочому ритмі.</h2>
-        <span className="section-note">Портрети — нейтральні слоти. Фото власника міняється через /assets/owner-portrait.jpg.</span>
+        <h2 id="team-title">Три людини, які тримають сайт у робочому стані.</h2>
+        <span className="section-note">Кожен відповідає за свою частину: від першої структури до фінального production-перегляду.</span>
       </div>
-      <div className="team-layout">
-        <aside className="team-photo-panel reveal-up" aria-label="Місця для майбутніх фото команди">
-          <div className="team-photo-grid">
-            {teamRoles.map((role, index) => (
-              <article className={`team-photo-slot ${role.type}`} key={role.title}>
-                <TeamPortrait role={role} />
-                <span>
-                  {numbered(index)} · {role.label}
-                </span>
-              </article>
-            ))}
-          </div>
-        </aside>
-        <div className="team-role-list">
-          {teamRoles.map((role, index) => (
-            <article className="team-role reveal-up" key={role.title}>
+      <div className="team-member-grid">
+        {teamRoles.map((role, index) => (
+          <article className="team-member-card reveal-up" key={role.name}>
+            <TeamPortrait role={role} />
+            <div className="team-member-copy">
               <span>
                 {numbered(index)} · {role.label}
               </span>
-              <h3>{role.title}</h3>
+              <h3>{role.name}</h3>
+              <strong>{role.title}</strong>
               <p>{role.text}</p>
-            </article>
-          ))}
-        </div>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );

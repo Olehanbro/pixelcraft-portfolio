@@ -2,7 +2,7 @@ import { brandConfig, contactChannels } from "@/lib/data";
 
 export const metadata = {
   title: "Контакти",
-  description: "Прямий email і GitHub для старту нового сайту з Myshchyshyn."
+  description: "Email, телефон, Telegram та Instagram для старту нового сайту з Myshchyshyn."
 };
 
 export default function ContactsPage() {
@@ -12,7 +12,7 @@ export default function ContactsPage() {
         <div className="contact-copy reveal-up">
           <p className="hero-kicker">Контакти · прямий старт</p>
           <h2 id="channels-title">Прямі канали</h2>
-          <p>Найшвидше почати з короткого email: задача, 2-3 референси й сторінки, які точно потрібні на першому запуску.</p>
+          <p>Найшвидше почати з короткого повідомлення: задача, 2-3 референси й сторінки, які точно потрібні на першому запуску.</p>
           <div className="channel-list">
             {contactChannels.map((channel) => (
               <a className={`channel-card ${channel.type}`} href={channel.href} key={channel.type} target={channel.href.startsWith("http") ? "_blank" : undefined} rel={channel.href.startsWith("http") ? "noreferrer" : undefined}>

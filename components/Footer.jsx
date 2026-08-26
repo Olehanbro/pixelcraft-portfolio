@@ -20,8 +20,12 @@ export function Footer() {
         <div className="footer-links" aria-label="Contact links">
           <span>Зв'язок</span>
           <a href={`mailto:${brandConfig.email}`}>Email</a>
-          <a href={brandConfig.github} target="_blank" rel="noreferrer">
-            GitHub
+          <a href={`tel:${brandConfig.phone}`}>{brandConfig.phone}</a>
+          <a href={brandConfig.telegram.href} target="_blank" rel="noreferrer">
+            Telegram
+          </a>
+          <a href={brandConfig.instagram.href} target="_blank" rel="noreferrer">
+            Instagram
           </a>
         </div>
       </div>

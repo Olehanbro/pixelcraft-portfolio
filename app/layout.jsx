@@ -26,7 +26,7 @@ export const metadata = {
     description: "Добірка живих сайтів, кейсів і production-посилань для швидкої перевірки робіт.",
     images: [
       {
-        url: "/og-myshchyshyn.png",
+        url: "/og-home.png",
         width: 1200,
         height: 630,
         alt: "Myshchyshyn portfolio preview"
@@ -37,7 +37,7 @@ export const metadata = {
     card: "summary_large_image",
     title: `${brandConfig.name} | Живі сайти та портфоліо`,
     description: "Добірка живих сайтів, кейсів і production-посилань.",
-    images: ["/og-myshchyshyn.png"]
+    images: ["/og-home.png"]
   }
 };
 

@@ -188,7 +188,7 @@
           </div>
 
           <div class="lc-story-grid">
-            <a class="lc-story reveal" href="https://vireon-drab.vercel.app/" target="_blank" rel="noreferrer">
+            <a class="lc-story reveal" href="https://myshchyshyn-portfolio.vercel.app/sites/vireon/" target="_blank" rel="noreferrer">
               <img src="/assets/lifecycle/lifecycle-infrastructure.png" alt="Low-emissions logistics case preview" />
               <div>
                 <p class="lc-badge">Vireon / Science</p>
@@ -202,7 +202,7 @@
                 <h3>Strategy studio landing</h3>
               </div>
             </a>
-            <a class="lc-story reveal" href="https://mentora-sigma-brown.vercel.app/" target="_blank" rel="noreferrer">
+            <a class="lc-story reveal" href="https://myshchyshyn-portfolio.vercel.app/sites/mentora/" target="_blank" rel="noreferrer">
               <img src="/assets/lifecycle/lifecycle-consultant.png" alt="Consulting team case preview" />
               <div>
                 <p class="lc-badge">Mentora / Education</p>
@@ -283,5 +283,15 @@
     </main>
 
     <script type="module" src="/sites/lifecycle/lifecycle.js"></script>
-  </body>
+  <script id="myshchyshyn-local-links">
+(function(){
+  var home='/sites/lifecycle/';
+  document.querySelectorAll('a[href]').forEach(function(a){
+    var href=a.getAttribute('href')||'';
+    if (/webflow\.io|webflow\.com|radianttemplates\.com|Myshchyshyn\.io/i.test(href)) a.setAttribute('href', home);
+    if (/^\/(?!sites\/lifecycle\/?$)/.test(href) && !/^\/(?:assets|_next|images|img|icons|fonts|favicon|apple-touch|og)/.test(href)) a.setAttribute('href', home);
+    if (a.getAttribute('href') === '#') return;
+  });
+})();
+</script></body>
 </html>

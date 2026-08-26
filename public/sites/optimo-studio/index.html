@@ -270,5 +270,15 @@
     </footer>
 
     <script type="module" src="/sites/optimo-studio/optimo.js"></script>
-  </body>
+  <script id="myshchyshyn-local-links">
+(function(){
+  var home='/sites/optimo-studio/';
+  document.querySelectorAll('a[href]').forEach(function(a){
+    var href=a.getAttribute('href')||'';
+    if (/webflow\.io|webflow\.com|radianttemplates\.com|Myshchyshyn\.io/i.test(href)) a.setAttribute('href', home);
+    if (/^\/(?!sites\/optimo-studio\/?$)/.test(href) && !/^\/(?:assets|_next|images|img|icons|fonts|favicon|apple-touch|og)/.test(href)) a.setAttribute('href', home);
+    if (a.getAttribute('href') === '#') return;
+  });
+})();
+</script></body>
 </html>

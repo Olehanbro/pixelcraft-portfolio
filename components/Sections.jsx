@@ -35,6 +35,10 @@ export function HomeHero() {
           className="hero-owner-card hero-portrait-stage"
           aria-label="Місце для майбутнього фото власника"
         >
+          <span className="hero-sparkle hero-sparkle-one" aria-hidden="true" />
+          <span className="hero-sparkle hero-sparkle-two" aria-hidden="true" />
+          <span className="hero-sparkle hero-sparkle-three" aria-hidden="true" />
+          <span className="hero-sparkle hero-sparkle-four" aria-hidden="true" />
           <OwnerPortrait modifier="hero-owner" />
         </aside>
       </div>

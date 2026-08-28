@@ -8,6 +8,9 @@ export function BadgeList({ items }) {
 
 export function ProjectCard({ project, featured = false, priority = false }) {
   const previewImage = project.heroImage || project.screenshots[0];
+  const benefits = project.benefits || project.technologies;
+  const coverLabel = project.coverLabel || project.fields.map(fieldLabel).slice(0, 1).join("");
+  const coverTitle = project.coverTitle || project.category;
 
   return (
     <Link className={`project-card reveal-up ${featured ? "featured" : ""}`} href={projectUrl(project)} aria-label={`Відкрити кейс ${project.title}`}>
@@ -20,7 +23,10 @@ export function ProjectCard({ project, featured = false, priority = false }) {
           sizes="(max-width: 820px) 100vw, (max-width: 1180px) 50vw, 33vw"
           style={{ objectFit: "cover" }}
         />
-        <span className="project-field">{project.fields.map(fieldLabel).slice(0, 1).join("")}</span>
+        <span className="project-field">{coverLabel}</span>
+        <div className="project-cover-copy">
+          <strong>{coverTitle}</strong>
+        </div>
       </div>
       <div className="project-info">
         <div>
@@ -29,7 +35,7 @@ export function ProjectCard({ project, featured = false, priority = false }) {
           <p>{project.description}</p>
         </div>
         <div className="project-meta">
-          <div>{project.technologies.slice(0, 3).map((item) => <span key={item}>{item}</span>)}</div>
+          <div>{benefits.slice(0, 3).map((item) => <span key={`${project.slug}-${item}`}>{item}</span>)}</div>
           <span>{project.year}</span>
         </div>
       </div>
